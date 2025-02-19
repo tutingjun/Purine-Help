@@ -58,7 +58,7 @@ class FoodPurineStore: ObservableObject {
         "FoodStore_Dish_" + name
     }
     
-    init(named name: String, shouldLoadData: Bool = false) {
+    init(named name: String) {
         self.name = name
         Task{
             print(isLoading)

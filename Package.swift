@@ -33,7 +33,8 @@ let package = Package(
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
             ],
             capabilities: [
-                .camera(purposeString: "Unknown Usage Description")
+                .camera(purposeString: "Unknown Usage Description"),
+                .photoLibrary(purposeString: "Unknown Usage Description")
             ]
         )
     ],
@@ -42,7 +43,8 @@ let package = Package(
             name: "AppModule",
             path: ".",
             resources: [
-                .process("Resources")
+                .process("Resources"),
+                .copy("MLModel/Food101.mlmodelc")
             ]
         )
     ],
