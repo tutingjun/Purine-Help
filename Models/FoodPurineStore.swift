@@ -23,7 +23,7 @@ struct DishDetail: Codable, Hashable, Identifiable {
     var ingredients: [IngredientDetail]
 }
 
-enum FoodItem: Identifiable {
+enum FoodItem: Identifiable, Codable, Hashable{
     case dish(DishDetail)
     case ingredient(IngredientDetail)
     
@@ -61,9 +61,7 @@ class FoodPurineStore: ObservableObject {
     init(named name: String) {
         self.name = name
         Task{
-            print(isLoading)
             await loadData();
-            print(isLoading)
         }
     }
 
@@ -118,8 +116,13 @@ class FoodPurineStore: ObservableObject {
 
         let parsedDishes = rawDishes.map { (dishName, ingredientIds) in
                 // Find the ingredients by their IDs
-            let dishIngredients = ingredientIds.compactMap { ingredientDict[$0] }
-            
+            var dishIngredients = ingredientIds.compactMap { ingredientDict[$0] }
+            dishIngredients.sort {
+                if let purineA = Double($0.purine_count), let purineB = Double($1.purine_count) {
+                    return purineA < purineB
+                }
+                return false
+            }
             return DishDetail(id: UUID(), name: dishName, ingredients: dishIngredients)
         }
 

@@ -17,7 +17,7 @@ class Helper{
         "Cereal grains and grain-based products": Color(hex: "#8B8000"),
         "Dairy and Eggs": .orange,
         "Finfish and shellfish": .teal,
-        "Fruits": .pink,
+        "Fruits": Color.init(hex: "#FF007F").opacity(0.9),
         "Lamb, veal, and game (other than organs)": Color(hex: "#FF0000"),
         "Lamb, veal, and game organ products": .brown,
         "Legumes and legume products": .green,
@@ -28,7 +28,7 @@ class Helper{
         "Poultry organ products": .brown,
         "Sausages and luncheon meats": .gray,
         "Soups, sauces, and seasonings": .cyan,
-        "Sweets": .pink,
+        "Sweets": Color.init(hex: "#FF007F").opacity(0.9),
         "Vegetables": .green,
         "Vegetarian meat, fish, and egg alternatives": .mint,
     ]
@@ -48,7 +48,10 @@ class Helper{
             return Image(systemName: "checkmark.circle.fill").foregroundStyle(tagColor(tag: "low"))
         } else if (tag == "medium"){
             return Image(systemName: "exclamationmark.circle.fill").foregroundStyle(tagColor(tag: "medium"))
-        } else {
+        } else if (tag == "undefined"){
+            return Image(systemName: "questionmark.circle.fill").foregroundStyle(Color.gray)
+        }
+        else {
             return Image(systemName: "xmark.circle.fill").foregroundStyle(tagColor(tag: "high"))
         }
     }
@@ -104,6 +107,9 @@ class Helper{
     
     // MARK: - utils
     static func formatStringToNearestThousandth(_ numberString: String) -> String {
+        if numberString == "ND" {
+            return "undefined"
+        }
         if let number = Double(numberString) {
             let roundedNumber = round(number * 1000) / 1000
             return String(roundedNumber)

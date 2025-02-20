@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct IngredientDetailedView: View {
+    @EnvironmentObject var user: UserStore
     var ingredient: IngredientDetail
+    @State var isFavorite: Bool
     @State var shouldPresentSheet = false
+    var fromSearch = true
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 35) {
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Text(ingredient.name)
-                            .font(.system(size: 36, weight: .heavy))
+                        
+                        HStack(alignment:.firstTextBaseline){
+                            Text(ingredient.name)
+                                .font(.system(size: 36, weight: .heavy))
+                            Spacer()
+                            Button{
+                                if isFavorite {
+                                    user.removeFavIngredient(ingredient)
+                                } else {
+                                    user.addFavIngredient(ingredient)
+                                }
+                                isFavorite.toggle()
+                            } label: {
+                                Image(systemName: isFavorite ? "star.fill" : "star")
+                                    .foregroundColor(isFavorite ? .orange : .black)
+                                    .font(.system(size: 18))
+                            }
+                        }
+                        
                         Text(
                             ingredient.category
                         )
@@ -46,11 +66,15 @@ struct IngredientDetailedView: View {
                             }
                         }
 
-                        Text(
-                            Helper.formatStringToNearestThousandth(
-                                ingredient.purine_count) + " mg"
-                        )
-                        .font(.headline)
+                        HStack{
+                            Helper.tagImage(tag: ingredient.tag)
+                            Text(
+                                Helper.formatStringToNearestThousandth(
+                                    ingredient.purine_count) + " mg"
+                            )
+                            .font(.headline)
+                        }
+                        
 
                         if ingredient.purine_count != "ND" {
                             SliderView(
@@ -85,6 +109,11 @@ struct IngredientDetailedView: View {
             }
 
         }
+        .onDisappear{
+            if fromSearch {
+                user.addRecentSearch(FoodItem.ingredient(ingredient))
+            }
+        }
     }
 }
 
@@ -92,5 +121,6 @@ struct IngredientDetailedView: View {
     IngredientDetailedView(
         ingredient: IngredientDetail(
             id: 1, category: "Vegetarian meat, fish, and egg alternatives",
-            name: "Rice, white, raw", purine_count: "1111.6", tag: "medium"))
+            name: "Rice, whitsdadsadadsadadasdase, raw", purine_count: "123", tag: "low"), isFavorite: false)
+    .environmentObject(UserStore())
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var userStore = UserStore()
     @StateObject var foodStore = FoodPurineStore(named: "test")
     @StateObject var imagePrediction = ImagePredictionModel()
 //    @StateObject var videoPrediction = VideoViewModel()
@@ -17,22 +18,29 @@ struct ContentView: View {
             LoadingView()
         } else {
             TabView {
-                CameraView()
-                    .environmentObject(imagePrediction)
-                    .tabItem{
-                        Label("Recognize", systemImage: "camera")
-                    }
+//                CameraView()
+//                    .environmentObject(imagePrediction)
+//                    .tabItem{
+//                        Label("Recognize", systemImage: "camera")
+//                    }
                 SearchView()
                     .environmentObject(foodStore)
+                    .environmentObject(userStore)
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass")
                     }
                 
-                LiveView()
-//                    .environmentObject(videoPrediction)
-                    .tabItem{
-                        Label("Live", systemImage: "video")
+                UserView()
+                    .environmentObject(userStore)
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
                     }
+//
+//                LiveView()
+////                    .environmentObject(videoPrediction)
+//                    .tabItem{
+//                        Label("Live", systemImage: "video")
+//                    }
                 
             }
 
