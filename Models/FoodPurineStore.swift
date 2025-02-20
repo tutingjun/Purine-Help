@@ -118,7 +118,7 @@ class FoodPurineStore: ObservableObject {
 
         let parsedDishes = rawDishes.map { (dishName, ingredientIds) in
                 // Find the ingredients by their IDs
-            var dishIngredients = ingredientIds.compactMap { ingredientDict[$0] }
+            let dishIngredients = ingredientIds.compactMap { ingredientDict[$0] }
             
             return DishDetail(id: UUID(), name: dishName, ingredients: dishIngredients)
         }

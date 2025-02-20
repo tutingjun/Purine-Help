@@ -13,50 +13,54 @@ struct CameraView: View {
     @State private var selectedImage: UIImage?
     
     var body: some View {
-        VStack {
-            // Display the selected image if any
-            if let image = selectedImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-            } else {
-                Text("No Image Selected")
-                    .padding()
+        NavigationStack{
+            VStack {
+                // Display the selected image if any
+                if let image = selectedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                } else {
+                    Text("No Image Selected")
+                        .padding()
+                }
+                
+                // Display prediction result or loading state
+                if imagePrediction.isLoading {
+                    ProgressView("Predicting...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                } else {
+                    Text(imagePrediction.predictedClassLabel)
+                        .font(.title)
+                        .padding()
+                }
+                
+                // Display error if any
+                if let error = imagePrediction.predictionError {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                
+                // Button to trigger image selection
+                Button("Select Image") {
+                    selectImage()
+                }
+                .padding()
+                
+                // Button to trigger prediction
+                Button("Predict") {
+                    // Pass selected image to view model for prediction
+                    imagePrediction.inputImage = selectedImage
+                    imagePrediction.predictImage()
+                }
+                .padding()
+                .disabled(selectedImage == nil)
             }
-            
-            // Display prediction result or loading state
-            if imagePrediction.isLoading {
-                ProgressView("Predicting...")
-                    .progressViewStyle(CircularProgressViewStyle())
-            } else {
-                Text(imagePrediction.predictedClassLabel)
-                    .font(.title)
-                    .padding()
-            }
-            
-            // Display error if any
-            if let error = imagePrediction.predictionError {
-                Text(error)
-                    .foregroundColor(.red)
-                    .padding()
-            }
-            
-            // Button to trigger image selection
-            Button("Select Image") {
-                selectImage()
-            }
-            .padding()
-            
-            // Button to trigger prediction
-            Button("Predict") {
-                // Pass selected image to view model for prediction
-                imagePrediction.inputImage = selectedImage
-                imagePrediction.predictImage()
-            }
-            .padding()
-            .disabled(selectedImage == nil)
+            .navigationTitle("Purine Helper")
         }
+        
     }
     
     // Function to pick an image from the photo library

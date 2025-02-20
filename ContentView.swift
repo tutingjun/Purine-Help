@@ -10,22 +10,30 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var foodStore = FoodPurineStore(named: "test")
     @StateObject var imagePrediction = ImagePredictionModel()
+//    @StateObject var videoPrediction = VideoViewModel()
     
     var body: some View {
         if foodStore.isLoading {
             LoadingView()
         } else {
             TabView {
-                SearchView()
-                    .environmentObject(foodStore)
-                    .tabItem {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
                 CameraView()
                     .environmentObject(imagePrediction)
                     .tabItem{
                         Label("Recognize", systemImage: "camera")
                     }
+                SearchView()
+                    .environmentObject(foodStore)
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                
+                LiveView()
+//                    .environmentObject(videoPrediction)
+                    .tabItem{
+                        Label("Live", systemImage: "video")
+                    }
+                
             }
 
         }

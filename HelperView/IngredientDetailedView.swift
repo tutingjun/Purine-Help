@@ -9,60 +9,88 @@ import SwiftUI
 
 struct IngredientDetailedView: View {
     var ingredient: IngredientDetail
-    
+    @State var shouldPresentSheet = false
+
     var body: some View {
-        NavigationStack{
-            HStack{
-                ScrollView{
-                    VStack (alignment: .leading, spacing: 20){
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 35) {
+
+                    VStack(alignment: .leading, spacing: 10) {
                         Text(ingredient.name)
-                            .font(.system(size: 34, weight: .heavy))
-                        VStack(alignment: .leading){
-                            Text("Category")
-                                .font(.callout)
-                                .foregroundStyle(.gray)
-                            Text(Helper.ingredientCat(category: ingredient.category) + " " + ingredient.category)
-                                .font(.headline)
-                        }
-                        
-                        VStack(alignment: .leading){
+                            .font(.system(size: 36, weight: .heavy))
+                        Text(
+                            ingredient.category
+                        )
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 10)
+                        .background(
+                            Helper.cateToColorMap[ingredient.category]
+                                ?? Color.gray
+                        )
+                        .clipShape(Capsule())
+                    }
+
+                    VStack(alignment: .leading) {
+                        HStack(alignment: .center) {
                             Text("Purine content (per 100 g):")
                                 .font(.callout)
                                 .foregroundStyle(.gray)
-                            Text(Helper.formatStringToNearestThousandth(ingredient.purine_count) + " mg")
-                                .font(.headline)
-                        }
-                        
-                        VStack(alignment: .leading){
-                            Text("Threat Level:")
-                                .font(.callout)
-                                .foregroundStyle(.gray)
-                            HStack (spacing: 3){
-                                Helper.tagImage(tag: ingredient.tag)
-                                Text(ingredient.tag.capitalized)
-                                    .font(.headline)
+                            Button {
+                                shouldPresentSheet.toggle()
+                            } label: {
+                                Image(systemName: "info.circle")
+                                    .foregroundStyle(Color.blue)
                             }
                         }
-                        
-                        VStack(alignment: .leading){
-                            Text("Safety Advice")
-                                .font(.callout)
-                                .foregroundStyle(.gray)
-                            Text("Fresh parsley, despite being a vegetable, exhibits a surprisingly high purine content of 289.3 mg per 100g. This level is significant, approaching that of some moderate-purine meats. While parsley is often used in small quantities as a garnish, individuals adhering to a strict low-purine diet, particularly those with gout, should be mindful of their intake. Consider using lower-purine herbs and vegetables for flavor enhancement. As always, consult with a healthcare professional or registered dietitian for personalized dietary advice regarding purine management.")
-                                .lineSpacing(4)
+
+                        Text(
+                            Helper.formatStringToNearestThousandth(
+                                ingredient.purine_count) + " mg"
+                        )
+                        .font(.headline)
+
+                        if ingredient.purine_count != "ND" {
+                            SliderView(
+                                currentValue: Double(
+                                    ingredient.purine_count)!
+                            )
+                            .padding(.bottom, 25)
                         }
-                        
-                        Spacer()
                     }
-                    Spacer()
+
+                    VStack(alignment: .leading) {
+                        Text("Safety Advice")
+                            .font(.callout)
+                            .foregroundStyle(.gray)
+                        Text(
+                            "Fresh parsley, despite being a vegetable, exhibits a surprisingly high purine content of 289.3 mg per 100g. This level is significant, approaching that of some moderate-purine meats. While parsley is often used in small quantities as a garnish, individuals adhering to a strict low-purine diet, particularly those with gout, should be mindful of their intake. Consider using lower-purine herbs and vegetables for flavor enhancement. As always, consult with a healthcare professional or registered dietitian for personalized dietary advice regarding purine management."
+                        )
+                        .lineSpacing(8)
+
+                    }
+
                 }
-                .edgesIgnoringSafeArea(.horizontal)
+                .padding(.horizontal, 5)
             }
+            .edgesIgnoringSafeArea(.horizontal)
             .padding()
+            .sheet(isPresented: $shouldPresentSheet) {
+                print("Sheet dismissed!")
+            } content: {
+                IngredientSheet(isPresented: $shouldPresentSheet)
+
+            }
+
         }
     }
 }
 
 #Preview {
-    IngredientDetailedView(ingredient: IngredientDetail(id: 1, category: "Cereal grains and grain-based products", name: "Rice, white, raw", purine_count: "32.6", tag: "medium"))
+    IngredientDetailedView(
+        ingredient: IngredientDetail(
+            id: 1, category: "Vegetarian meat, fish, and egg alternatives",
+            name: "Rice, white, raw", purine_count: "1111.6", tag: "medium"))
 }

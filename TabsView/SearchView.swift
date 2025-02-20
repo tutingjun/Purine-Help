@@ -5,7 +5,14 @@ struct SearchView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 2) {
+            VStack(alignment: .leading, spacing: 2) {
+                VStack(){
+                    Text("最近搜索")
+                    HStack{
+                        Text("Recent")
+                    }
+                }
+                .padding(.horizontal)
                 if !store.filteredFood.isEmpty {
                     FilterGroup()
                         .padding(.vertical, 5)
