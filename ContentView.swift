@@ -18,11 +18,16 @@ struct ContentView: View {
             LoadingView()
         } else {
             TabView {
-//                CameraView()
-//                    .environmentObject(imagePrediction)
-//                    .tabItem{
-//                        Label("Recognize", systemImage: "camera")
-//                    }
+                
+                MainView()
+                    .environmentObject(videoPrediction)
+                    .environmentObject(imagePrediction)
+                    .environmentObject(foodStore)
+                    .environmentObject(userStore)
+                    .tabItem{
+                        Label("Predict", systemImage: "fork.knife")
+                    }
+                
                 SearchView()
                     .environmentObject(foodStore)
                     .environmentObject(userStore)
@@ -34,14 +39,6 @@ struct ContentView: View {
                     .environmentObject(userStore)
                     .tabItem {
                         Label("Favorites", systemImage: "star")
-                    }
-
-                LiveView()
-                    .environmentObject(videoPrediction)
-                    .environmentObject(foodStore)
-                    .environmentObject(userStore)
-                    .tabItem{
-                        Label("Live", systemImage: "video")
                     }
                 
             }

@@ -19,7 +19,7 @@ class ImagePredictionModel: ObservableObject {
     @Published var inputImage: UIImage? = nil
     
     // Output prediction result
-    @Published var predictedClassLabel: String = ""
+    @Published var predictions: [(label: String, confidence: Double)] = []
     @Published var isLoading: Bool = false
     @Published var predictionError: String? = nil
     
@@ -52,24 +52,23 @@ class ImagePredictionModel: ObservableObject {
     }
     
     private func performPrediction(pixelBuffer: CVPixelBuffer) {
-            // Perform prediction on a background thread
-        Task {
-            do {
-                // Prediction is async now
-                
-                let input = Food101Input(mobilenetv2_1_00_224_input: pixelBuffer)
-                let prediction = try model.prediction(input: input)
-                
-                // Update UI on the main thread
-                self.predictedClassLabel = prediction.classLabel
-                self.isLoading = false
-            } catch {
-                // Handle errors in prediction
-                self.predictionError = "Prediction failed: \(error.localizedDescription)"
-                self.isLoading = false
+            Task {
+                do {
+                    let input = Food101Input(mobilenetv2_1_00_224_input: pixelBuffer)
+                    let prediction = try model.prediction(input: input)
+                    
+                    // Convert dictionary to sorted list of tuples
+                    let sortedPredictions = prediction.classLabel_probs.sorted { $0.value > $1.value }
+                    
+                    // Update UI
+                    self.predictions = sortedPredictions.map { (label: $0.key, confidence: $0.value) }
+                    self.isLoading = false
+                } catch {
+                    self.predictionError = "Prediction failed: \(error.localizedDescription)"
+                    self.isLoading = false
+                }
             }
         }
-    }
     
     private func uiImageToPixelBuffer(image: UIImage, width: Int, height: Int) -> CVPixelBuffer? {
         // Define pixel buffer attributes

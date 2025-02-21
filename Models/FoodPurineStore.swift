@@ -67,7 +67,8 @@ class FoodPurineStore: ObservableObject {
     
     public func getDishByName(_ name: String) -> DishDetail? {
            // Search for the dish by name, case insensitive
-           return dishes.first { $0.name.lowercased() == name.lowercased() }
+        let modifiedString = name.replacingOccurrences(of: "_", with: " ")
+        return dishes.first { $0.name.lowercased() == modifiedString.lowercased() }
        }
 
     public func loadData() async {

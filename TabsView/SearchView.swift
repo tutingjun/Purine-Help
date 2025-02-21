@@ -29,7 +29,7 @@ struct SearchView: View {
                                     IngredientDetailedView(ingredient: food, isFavorite: user.isIngredientFav(food))
                                         .environmentObject(user)
                                 } label: {
-                                    RecentSearchCapsule(name: food.name)
+                                    RecentSearchCapsule(name: food.name.capitalized)
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             case .dish(let dish):
@@ -37,7 +37,7 @@ struct SearchView: View {
                                     DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
                                         .environmentObject(user)
                                 } label: {
-                                    RecentSearchCapsule(name: dish.name)
+                                    RecentSearchCapsule(name: dish.name.capitalized)
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             }

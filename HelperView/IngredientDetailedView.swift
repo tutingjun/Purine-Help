@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IngredientDetailedView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @EnvironmentObject var user: UserStore
     var ingredient: IngredientDetail
     @State var isFavorite: Bool
@@ -34,7 +36,7 @@ struct IngredientDetailedView: View {
                                 isFavorite.toggle()
                             } label: {
                                 Image(systemName: isFavorite ? "star.fill" : "star")
-                                    .foregroundColor(isFavorite ? .orange : .black)
+                                    .foregroundColor(isFavorite ? .orange : colorScheme == .light ? .black : .white)
                                     .font(.system(size: 18))
                             }
                         }
@@ -81,6 +83,7 @@ struct IngredientDetailedView: View {
                                 currentValue: Double(
                                     ingredient.purine_count)!
                             )
+                            .padding(.top, 5)
                             .padding(.bottom, 25)
                         }
                     }
@@ -121,6 +124,6 @@ struct IngredientDetailedView: View {
     IngredientDetailedView(
         ingredient: IngredientDetail(
             id: 1, category: "Vegetarian meat, fish, and egg alternatives",
-            name: "Rice, whitsdadsadadsadadasdase, raw", purine_count: "123", tag: "low"), isFavorite: false)
+            name: "Rice, whitsdadsadadsadadasdase, raw", purine_count: "5.9", tag: "low"), isFavorite: false)
     .environmentObject(UserStore())
 }

@@ -15,10 +15,9 @@ class VideoViewModel: VideoViewController, ObservableObject {
     private var model: Food101  // The generated Core ML model class
     @Published var predictedClassLabel: String = ""
     @Published var isCameraReady: Bool = false
+    @Published var startPrediction: Bool = false
     
     private var predictedLabelsHistory: [String] = []
-
-
 
     override init() {
         guard let model = try? Food101(configuration: MLModelConfiguration())
@@ -37,6 +36,10 @@ class VideoViewModel: VideoViewController, ObservableObject {
         _ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer,
         from connection: AVCaptureConnection
     ) {
+        if !startPrediction{
+            return
+        }
+        
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         else {
             return
@@ -66,7 +69,7 @@ class VideoViewModel: VideoViewController, ObservableObject {
             
             let labelCounts = Dictionary(
                         predictedLabelsHistory.map { ($0, 1) }, uniquingKeysWith: +)
-            self.predictedClassLabel = labelCounts.max { $0.value < $1.value }?.key ?? ""
+            predictedClassLabel = labelCounts.max { $0.value < $1.value }?.key ?? ""
 
         } catch {
             print("Prediction failed: \(error.localizedDescription)")

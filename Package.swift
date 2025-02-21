@@ -33,8 +33,8 @@ let package = Package(
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
             ],
             capabilities: [
-                .camera(purposeString: "Camera Needed"),
-                .photoLibrary(purposeString: "Unknown Usage Description")
+                .camera(purposeString: "We need access to your camera to analyze food in real-time and provide purine content predictions. No data is stored or used outside of this purpose."),
+                .photoLibrary(purposeString: "We need access to your photo library to allow you to upload images for purine content analysis. No data is stored or used outside of this purpose.")
             ]
         )
     ],

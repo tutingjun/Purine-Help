@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DishDetailedView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @EnvironmentObject var user: UserStore
     var dish: DishDetail
     @State var isFavorite: Bool
@@ -30,7 +32,7 @@ struct DishDetailedView: View {
                             isFavorite.toggle()
                         } label: {
                             Image(systemName: isFavorite ? "star.fill" : "star")
-                                .foregroundColor(isFavorite ? .orange : .black)
+                                .foregroundColor(isFavorite ? .orange : colorScheme == .light ? .black : .white)
                                 .font(.system(size: 18))
                         }
                     }
