@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var userStore = UserStore()
     @StateObject var foodStore = FoodPurineStore(named: "test")
     @StateObject var imagePrediction = ImagePredictionModel()
-//    @StateObject var videoPrediction = VideoViewModel()
+    @StateObject var videoPrediction = VideoViewModel()
     
     var body: some View {
         if foodStore.isLoading {
@@ -35,12 +35,14 @@ struct ContentView: View {
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
-//
-//                LiveView()
-////                    .environmentObject(videoPrediction)
-//                    .tabItem{
-//                        Label("Live", systemImage: "video")
-//                    }
+
+                LiveView()
+                    .environmentObject(videoPrediction)
+                    .environmentObject(foodStore)
+                    .environmentObject(userStore)
+                    .tabItem{
+                        Label("Live", systemImage: "video")
+                    }
                 
             }
 

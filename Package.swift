@@ -39,7 +39,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/dkk/WrappingHStack", .upToNextMajor(from: "2.0.0"))    ],
+        .package(url: "https://github.com/dkk/WrappingHStack", "2.0.0"..<"3.0.0")
+    ],
     targets: [
         .executableTarget(
             name: "AppModule",
@@ -52,6 +53,5 @@ let package = Package(
                 .copy("MLModel/Food101.mlmodelc")
             ]
         )
-    ],
-    swiftLanguageVersions: [.version("6")]
+    ]
 )

@@ -64,6 +64,11 @@ class FoodPurineStore: ObservableObject {
             await loadData();
         }
     }
+    
+    public func getDishByName(_ name: String) -> DishDetail? {
+           // Search for the dish by name, case insensitive
+           return dishes.first { $0.name.lowercased() == name.lowercased() }
+       }
 
     public func loadData() async {
         await MainActor.run { self.isLoading = true } // Show loading indicator
