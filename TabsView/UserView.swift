@@ -51,8 +51,9 @@ struct UserView: View {
                             .font(.system(size: 20, weight: .semibold))
                         Spacer()
                         if user.userFavIngredient.count > 4 {
-                            Button {
-
+                            NavigationLink {
+                                FavoriteIngredientFilter()
+                                    .environmentObject(user)
                             } label: {
                                 Text("View More")
                             }
@@ -98,10 +99,14 @@ struct UserView: View {
                                     )
                                     .environmentObject(user)
                                 } label: {
-                                    Text(dish.name.capitalized)
-                                        .fontWeight(.semibold)
-                                        .font(.headline)
-                                        .padding(.vertical, 3)
+                                    HStack{
+                                        Text(dish.name.capitalized)
+                                            .fontWeight(.semibold)
+                                            .font(.headline)
+                                            .padding(.vertical, 3)
+                                        Spacer()
+                                    }
+                                    .contentShape(Rectangle())
                                 }
                             }
                             .onDelete(perform: user.removeFavDish(at:))

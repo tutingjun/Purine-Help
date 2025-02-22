@@ -64,12 +64,6 @@ class FoodPurineStore: ObservableObject {
             await loadData();
         }
     }
-    
-    public func getDishByName(_ name: String) -> DishDetail? {
-           // Search for the dish by name, case insensitive
-        let modifiedString = name.replacingOccurrences(of: "_", with: " ")
-        return dishes.first { $0.name.lowercased() == modifiedString.lowercased() }
-       }
 
     public func loadData() async {
         await MainActor.run { self.isLoading = true } // Show loading indicator
@@ -161,6 +155,17 @@ class FoodPurineStore: ObservableObject {
                 return dish.name.lowercased().contains(searchText.lowercased())
             }
         }
+    }
+    
+    public func getDishByName(_ name: String) -> DishDetail? {
+        let modifiedString = name.replacingOccurrences(of: "_", with: " ").lowercased()
+
+        for item in foods {
+            if case .dish(let dish) = item, dish.name.lowercased() == modifiedString {
+                return dish
+            }
+        }
+        return nil
     }
     
     var filteredFood: [FoodItem] {
@@ -257,16 +262,7 @@ class FoodPurineStore: ObservableObject {
             }
         }
         purineLevel = Array(Set(purineLevel))
-        // Custom sort order for purine levels
-        let sortOrder: [String] = ["low", "medium", "high", "undefined"]
-        
-        // Sort using the custom order
-        purineLevel.sort { (level1, level2) in
-            if let index1 = sortOrder.firstIndex(of: level1), let index2 = sortOrder.firstIndex(of: level2) {
-                return index1 < index2
-            }
-            return false
-        }
-        return purineLevel
+        return Helper.sortPurineLevel(purineLevel)
     }
 }
+ 

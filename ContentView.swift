@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+@available(iOS 18.0, *)
 struct ContentView: View {
     @StateObject var userStore = UserStore()
     @StateObject var foodStore = FoodPurineStore(named: "test")
     @StateObject var imagePrediction = ImagePredictionModel()
-    @StateObject var videoPrediction = VideoViewModel()
+    @StateObject var videoPrediction = DetectionModel()
     
     var body: some View {
         if foodStore.isLoading {
@@ -63,5 +64,9 @@ struct LoadingView: View {
 }
 
 #Preview {
-    ContentView()
+    if #available(iOS 18.0, *) {
+        ContentView()
+    } else {
+        // Fallback on earlier versions
+    }
 }

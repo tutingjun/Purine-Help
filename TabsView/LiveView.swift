@@ -1,14 +1,15 @@
-//
-//  LiveView.swift
-//  Purine Help
-//
-//  Created by 涂庭鋆 on 2025/2/18.
-//
+////
+////  LiveView.swift
+////  Purine Help
+////
+////  Created by 涂庭鋆 on 2025/2/18.
+////
 
 import SwiftUI
 
+@available(iOS 18.0, *)
 struct LiveView: View {
-    @EnvironmentObject private var camera: VideoViewModel
+    @EnvironmentObject private var camera: DetectionModel
     @EnvironmentObject private var food: FoodPurineStore
     @EnvironmentObject private var user: UserStore
     
@@ -24,7 +25,7 @@ struct LiveView: View {
                             Spacer()
                             HStack{
                                 Text("Start Prediction: ")
-                                Toggle("Start Prediction: ", isOn: $camera.startPrediction)
+                                Toggle("Start Prediction: ", isOn: $camera.isDetecting)
                                     .labelsHidden()
                             }
                             .padding(10)
@@ -37,7 +38,7 @@ struct LiveView: View {
                         
                         Spacer()
                         
-                        if !camera.predictedClassLabel.isEmpty && camera.startPrediction {
+                        if !camera.predictedClassLabel.isEmpty && camera.isDetecting {
                             if let dish = food.getDishByName(camera.predictedClassLabel) {
                                 NavigationLink {
                                     DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
@@ -66,25 +67,24 @@ struct LiveView: View {
                 }
                 
             }
-            .onAppear {
-                if camera.isCameraReady{
-                    camera.startPrediction = false
-                    camera.startCaptureSession()
-                }
+            .task {
+                await camera.start()
             }
             .onDisappear {
-                if camera.isCameraReady{
-                    camera.teardownAVCapture()
-                }
+                camera.stop()
             }
         }
     }
 }
 
 #Preview {
-    LiveView()
-        .environmentObject(VideoViewModel())
-        .environmentObject(UserStore())
-        .environmentObject(FoodPurineStore(named: "test"))
+    if #available(iOS 18.0, *) {
+        LiveView()
+            .environmentObject(DetectionModel())
+            .environmentObject(UserStore())
+            .environmentObject(FoodPurineStore(named: "test"))
+    } else {
+        // Fallback on earlier versions
+    }
     
 }

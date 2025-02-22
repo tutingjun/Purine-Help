@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+@available(iOS 18.0, *)
 struct MainView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @EnvironmentObject private var photo: ImagePredictionModel
     @EnvironmentObject private var food: FoodPurineStore
     @EnvironmentObject private var user: UserStore
-    @EnvironmentObject private var camera: VideoViewModel
+    @EnvironmentObject private var camera: DetectionModel
 
     
     var body: some View {

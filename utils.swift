@@ -117,6 +117,25 @@ class Helper{
         return numberString
     }
     
+    static func sortPurineLevel(_ items: [String]) -> [String] {
+        let sortOrder: [String] = ["low", "medium", "high", "undefined"]
+        return items.sorted { (item1, item2) in
+            if let index1 = sortOrder.firstIndex(of: item1),
+               let index2 = sortOrder.firstIndex(of: item2) {
+                return index1 < index2
+            }
+            return false
+        }
+    }
+    
+    static func sortIngredientsByPurineCount(_ ingredients: [IngredientDetail]) -> [IngredientDetail] {
+        return ingredients.sorted { (ingredient1, ingredient2) in
+            let purine1 = Double(ingredient1.purine_count) ?? Double.greatestFiniteMagnitude // Treat "ND" as highest
+            let purine2 = Double(ingredient2.purine_count) ?? Double.greatestFiniteMagnitude
+            return purine1 < purine2
+        }
+    }
+    
 }
 
 

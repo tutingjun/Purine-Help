@@ -8,8 +8,9 @@
 import SwiftUI
 import AVFoundation
 
+@available(iOS 18.0, *)
 struct CameraViewRepresentable: UIViewControllerRepresentable {
-    let viewModel: VideoViewModel
+    let viewModel: CameraManager
     
     func makeUIViewController(context: Context) -> CameraViewController {
         let controller = CameraViewController()
@@ -21,18 +22,20 @@ struct CameraViewRepresentable: UIViewControllerRepresentable {
 }
 
 // MARK: - UIViewController for Camera Feed
+@available(iOS 18.0, *)
 class CameraViewController: UIViewController {
-    var viewModel: VideoViewModel!
+    var viewModel: CameraManager!
     private let previewLayer = AVCaptureVideoPreviewLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        previewLayer.session = viewModel.session
+        previewLayer.session = viewModel.captureSession
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
-        
-        viewModel.startCaptureSession()
+        Task{
+            await viewModel.start()
+        }
     }
     
     override func viewDidLayoutSubviews() {

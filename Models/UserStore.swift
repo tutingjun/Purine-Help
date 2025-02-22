@@ -15,7 +15,7 @@ class UserStore: ObservableObject {
             }
         }
     }
-    
+
     @Published var userFavIngredient: [IngredientDetail] {
         didSet {
             if let encoded = try? JSONEncoder().encode(self.userFavIngredient) {
@@ -42,7 +42,7 @@ class UserStore: ObservableObject {
         } else {
             self.userFavDish = []
         }
-        
+
         if let savedData = UserDefaults.standard.data(
             forKey: "userFavIngredient"),
             let decodedData = try? JSONDecoder().decode(
@@ -63,11 +63,72 @@ class UserStore: ObservableObject {
         }
     }
 
-    // MARK: User Intent
+    // MARK: - User Intent
+    @Published var searchText: String = ""
+    @Published var selectedCategory: String = ""
+    @Published var selectedTag: String = ""
+
+    var searchedFood: [IngredientDetail] {
+        if searchText.isEmpty {
+            return userFavIngredient
+        }
+
+        return userFavIngredient.filter { ingredient in
+            return ingredient.name.lowercased().contains(
+                searchText.lowercased())
+        }
+    }
+    
+    var filteredFood: [IngredientDetail] {
+        var result = searchedFood
+        
+        if !selectedCategory.isEmpty {
+            result = result.filter { item in
+                item.category.lowercased() == selectedCategory.lowercased()
+                }
+            }
+        
+        if !selectedTag.isEmpty {
+            result = result.filter { item in
+                item.tag.lowercased() == selectedTag.lowercased()
+               
+            }
+        }
+        return Helper.sortIngredientsByPurineCount(result)
+    }
+    
+    public func getAllCategories() -> [String]{
+        if filteredFood.isEmpty{
+            return []
+        }
+        var categoryNames: [String] = []
+
+        for item in filteredFood {
+            categoryNames.append(item.category)
+        }
+        
+        categoryNames = Array(Set(categoryNames))
+        categoryNames.sort()
+        return categoryNames
+    }
+    
+    public func getAllPurineLevel() -> [String]{
+        if filteredFood.isEmpty{
+            return []
+        }
+        var purineLevel: [String] = []
+
+        for item in filteredFood {
+            purineLevel.append(item.tag)
+        }
+        purineLevel = Array(Set(purineLevel))
+        return Helper.sortPurineLevel(purineLevel)
+    }
+    
     func addFavDish(_ item: DishDetail) {
         userFavDish.append(item)
     }
-    
+
     func addFavIngredient(_ item: IngredientDetail) {
         userFavIngredient.append(item)
     }
@@ -75,33 +136,27 @@ class UserStore: ObservableObject {
     func removeFavDish(_ item: DishDetail) {
         userFavDish.removeAll { $0 == item }
     }
-    
+
     func removeFavIngredient(_ item: IngredientDetail) {
         userFavIngredient.removeAll { $0 == item }
     }
-    
+
     func removeFavDish(at offsets: IndexSet) {
-            userFavDish.remove(atOffsets: offsets)
-        }
-    
-    func isDishFav(_ item: DishDetail) -> Bool{
-        return userFavDish.contains(item)
+        userFavDish.remove(atOffsets: offsets)
     }
     
-    func isIngredientFav(_ item: IngredientDetail) -> Bool{
-        return userFavIngredient.contains(item)
+    func removeFavIngredient(at offsets: IndexSet) {
+        let itemsToRemove = offsets.map { filteredFood[$0] }
+        userFavIngredient.removeAll { itemsToRemove.contains($0) }
     }
 
-    //    func filterUserPreferences(category: String? = nil, tag: String? = nil, isDish: Bool? = nil) -> [FoodItem] {
-    //        return userPreferences.filter { item in
-    //            switch item {
-    //            case .dish(let dish):
-    //                return (isDish ?? true) && (category == nil || dish.name == category) && (tag == nil)
-    //            case .ingredient(let ingredient):
-    //                return (isDish ?? false) && (category == nil || ingredient.category == category) && (tag == nil || ingredient.tag == tag)
-    //            }
-    //        }
-    //    }
+    func isDishFav(_ item: DishDetail) -> Bool {
+        return userFavDish.contains(item)
+    }
+
+    func isIngredientFav(_ item: IngredientDetail) -> Bool {
+        return userFavIngredient.contains(item)
+    }
 
     func addRecentSearch(_ search: FoodItem) {
         if let index = recentSearches.firstIndex(of: search) {
@@ -110,7 +165,7 @@ class UserStore: ObservableObject {
 
         recentSearches.insert(search, at: 0)
 
-        if recentSearches.count > 10 {
+        if recentSearches.count > 5 {
             recentSearches.removeLast()
         }
     }

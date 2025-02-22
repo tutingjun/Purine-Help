@@ -53,5 +53,6 @@ let package = Package(
                 .copy("MLModel/Food101.mlmodelc")
             ]
         )
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

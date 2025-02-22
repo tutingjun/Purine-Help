@@ -117,6 +117,8 @@ struct DishDetailedView: View {
                 Image(systemName: "chevron.right")
                     .foregroundStyle(.secondary)
             }
+            .contentShape(Rectangle())
+
             Divider()
         }
     }
@@ -128,10 +130,10 @@ struct DishDetailedView: View {
         ingredients: [
             IngredientDetail(
                 id: 1, category: "Pasta", name: "Spaghetti",
-                purine_count: "Medium", tag: "medium"),
+                purine_count: "12", tag: "medium"),
             IngredientDetail(
                 id: 2, category: "Meat", name: "Ground Beef",
-                purine_count: "High", tag: "high"),
+                purine_count: "234", tag: "high"),
         ])
     DishDetailedView(dish: test, isFavorite: false)
         .environmentObject(UserStore())

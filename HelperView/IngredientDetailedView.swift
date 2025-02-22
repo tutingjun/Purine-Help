@@ -83,7 +83,7 @@ struct IngredientDetailedView: View {
                                 currentValue: Double(
                                     ingredient.purine_count)!
                             )
-                            .padding(.top, 5)
+                            .padding(.top, 10)
                             .padding(.bottom, 25)
                         }
                     }
