@@ -10,7 +10,7 @@ import SwiftUI
 @available(iOS 18.0, *)
 struct ContentView: View {
     @StateObject var userStore = UserStore()
-    @StateObject var foodStore = FoodPurineStore(named: "test")
+    @StateObject var foodStore = FoodPurineStore()
     @StateObject var imagePrediction = ImagePredictionModel()
     @StateObject var videoPrediction = DetectionModel()
     
@@ -19,7 +19,6 @@ struct ContentView: View {
             LoadingView()
         } else {
             TabView {
-                
                 MainView()
                     .environmentObject(videoPrediction)
                     .environmentObject(imagePrediction)
@@ -40,6 +39,13 @@ struct ContentView: View {
                     .environmentObject(userStore)
                     .tabItem {
                         Label("Favorites", systemImage: "star")
+                    }
+                
+                TopView()
+                    .environmentObject(foodStore)
+                    .environmentObject(userStore)
+                    .tabItem {
+                        Label("Top", systemImage: "list.number")
                     }
                 
             }

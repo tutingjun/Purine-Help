@@ -82,7 +82,7 @@ struct LiveView: View {
         LiveView()
             .environmentObject(DetectionModel())
             .environmentObject(UserStore())
-            .environmentObject(FoodPurineStore(named: "test"))
+            .environmentObject(FoodPurineStore())
     } else {
         // Fallback on earlier versions
     }

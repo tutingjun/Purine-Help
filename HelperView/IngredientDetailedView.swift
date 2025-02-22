@@ -20,9 +20,8 @@ struct IngredientDetailedView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 35) {
-
+                    
                     VStack(alignment: .leading, spacing: 10) {
-                        
                         HStack(alignment:.firstTextBaseline){
                             Text(ingredient.name)
                                 .font(.system(size: 36, weight: .heavy))
@@ -41,18 +40,21 @@ struct IngredientDetailedView: View {
                             }
                         }
                         
-                        Text(
-                            ingredient.category
-                        )
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 10)
-                        .background(
-                            Helper.cateToColorMap[ingredient.category]
-                                ?? Color.gray
-                        )
-                        .clipShape(Capsule())
+                        NavigationLink{
+//                            TopIngredientList(categoryList: [IngredientDetail], category: <#T##String#>)
+                        } label: {
+                            Text(
+                                Helper.transformCate(ingredient.category).capitalized
+                            )
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 10)
+                            .background(
+                                Helper.cateToColorMap[ingredient.category]!
+                            )
+                            .clipShape(Capsule())
+                        }
                     }
 
                     VStack(alignment: .leading) {

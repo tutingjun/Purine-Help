@@ -136,5 +136,5 @@ struct PhotoView: View {
     PhotoView()
         .environmentObject(ImagePredictionModel())
         .environmentObject(UserStore())
-        .environmentObject(FoodPurineStore(named: "test"))
+        .environmentObject(FoodPurineStore())
 }

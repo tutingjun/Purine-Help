@@ -126,11 +126,11 @@ class UserStore: ObservableObject {
     }
     
     func addFavDish(_ item: DishDetail) {
-        userFavDish.append(item)
+        userFavDish.insert(item, at: 0)
     }
 
     func addFavIngredient(_ item: IngredientDetail) {
-        userFavIngredient.append(item)
+        userFavIngredient.insert(item, at: 0)
     }
 
     func removeFavDish(_ item: DishDetail) {

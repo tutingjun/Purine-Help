@@ -104,6 +104,65 @@ class Helper{
             return "❓"
         }
     }
+   
+    static func ingredientCatDescription(category: String) -> String{
+        switch category {
+        case "Alcohol":
+            return "Alcoholic drinks like beer and whiskey are high in purines, which can trigger gout attacks; gout patients should limit alcohol and opt for low-purine options."
+        case "Beef (other than organs)":
+            return "Beef, especially cuts like sirloin and brisket, can be high in purines, which may increase uric acid levels. Gout patients should limit beef intake."
+        case "Beef Organ Products":
+            return "Beef organ products like liver and kidney are very high in purines, which can worsen gout. Gout patients should avoid or limit these foods."
+        case "Beverages":
+            return "Beverages like green tea and fruit juice are low in purines and generally safe for gout patients. However, sugary fruit juices should be consumed in moderation."
+        case "Cereal grains and grain-based products":
+            return "Cereal grains and their products like white bread and pasta are low in purines, making them generally safe for gout patients. Whole grains are a healthier option."
+        case "Dairy and Eggs":
+            return "Dairy products like cheese and yogurt are low in purines, making them safe for gout patients. Eggs and milk are also good, low-purine choices."
+        case "Finfish and shellfish":
+            return "Finfish and shellfish like sardines, mackerel, and shrimp are high in purines, which can worsen gout. Gout patients should limit these foods."
+        case "Fruits":
+            return "Fruits like bananas, strawberries, and avocado are low in purines, making them safe for gout patients. Goji berries can also be enjoyed in moderation."
+        case "Lamb, veal, and game (other than organs)":
+            return "Lamb, veal, and mutton are moderate to high in purines, which can trigger gout attacks. Gout patients should limit their intake of these meats."
+        case "Lamb, veal, and game organ products":
+            return "Lamb organ products like heart and liver are high in purines, which can increase uric acid levels. Gout patients should avoid or limit these foods."
+        case "Legumes and legume products":
+            return "Legumes like beans, lentils, and soy products are moderate to high in purines, which can trigger gout. Gout patients should consume them in moderation."
+        case "Nuts and seeds":
+            return "Nuts and seeds like almonds, walnuts, and chia seeds are low in purines and safe for gout patients. They can be enjoyed in moderation."
+        case "Pork (other than organs)":
+            return "Pork cuts like roast, ribs, and tenderloin are moderate in purines and can trigger gout attacks. Gout patients should limit pork intake."
+        case "Pork organ products":
+            return "Pork organ products like liver, kidney, and heart are high in purines, which can worsen gout. Gout patients should avoid or limit these foods."
+        case "Poultry (other than organs)":
+            return "Poultry like chicken and turkey has moderate purine levels, which can trigger gout attacks. Gout patients should consume poultry in moderation."
+        case "Poultry organ products":
+            return "Poultry organ products like chicken liver and heart are high in purines, which can worsen gout. Gout patients should limit or avoid these foods."
+        case "Sausages and luncheon meats":
+            return "Sausages and luncheon meats like salami, prosciutto, and corned beef are high in purines, which can trigger gout. Gout patients should limit these foods."
+        case "Soups, sauces, and seasonings":
+            return "Soups, sauces, and seasonings like ketchup, curry, and soy sauce are generally low in purines but can be high in sodium. Gout patients should use them in moderation."
+        case "Sweets":
+            return "Chocolate and honey are low in purines, making them safe for gout patients. However, they should still be consumed in moderation due to sugar content."
+        case "Vegetables":
+            return "Most vegetables, like broccoli, carrots, and spinach, are low in purines and safe for gout patients. However, mushrooms and peas should be eaten in moderation."
+        case "Vegetarian meat, fish, and egg alternatives":
+            return "Vegetarian meat alternatives like tofu, veggie burgers, and soy-based products are low in purines and safe for gout patients. Moderation is key."
+        default:
+            return ""
+        }
+    }
+    
+    static func transformCate(_ category: String) -> String {
+        if category.contains(", and") {
+            return category.replacingOccurrences(of: ", and", with: " &")
+        } else if category.contains("and")  {
+            return category.replacingOccurrences(of: "and", with: "&")
+        } else {
+            return category
+        }
+    }
     
     // MARK: - utils
     static func formatStringToNearestThousandth(_ numberString: String) -> String {
