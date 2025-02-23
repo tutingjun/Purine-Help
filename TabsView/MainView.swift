@@ -21,10 +21,12 @@ struct MainView: View {
         NavigationStack{
             Spacer()
             VStack(spacing: 5) {
-                HStack(spacing: 10){
-                    Image(systemName: "carrot")
-                        .font(.system(size: 30))
-                        .foregroundColor(Color.init(hex: "#FF8C00"))
+                HStack(spacing: 13){
+                    Image(colorScheme == .light ? .logoLight : .logoDark)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 35, height: 35)
+                    
                     
                     Text("Purine Helper")
                         .font(.largeTitle)
