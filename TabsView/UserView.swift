@@ -9,15 +9,12 @@ import SwiftUI
 
 struct UserView: View {
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.editMode) private var editMode  // Track edit mode state
-
-    @State private var isEditing = false  // Control edit mode manually
-
     @EnvironmentObject var user: UserStore
+    @EnvironmentObject var food: FoodPurineStore
 
     let columns = [
-        GridItem(.flexible()),  // First column
-        GridItem(.flexible()),  // Second column
+        GridItem(.flexible()),
+        GridItem(.flexible()),
     ]
 
     var body: some View {
@@ -54,6 +51,7 @@ struct UserView: View {
                             NavigationLink {
                                 FavoriteIngredientFilter()
                                     .environmentObject(user)
+                                    .environmentObject(food)
                             } label: {
                                 Text("View More")
                             }
@@ -65,10 +63,12 @@ struct UserView: View {
                             ingredient in
                             NavigationLink {
                                 IngredientDetailedView(
-                                    ingredient: ingredient, isFavorite: true,
+                                    ingredient: ingredient,
+                                    isFavorite: true,
                                     fromSearch: false
                                 )
                                 .environmentObject(user)
+                                .environmentObject(food)
                             } label: {
                                 IngredientCard(ingredient)
                             }
@@ -98,6 +98,7 @@ struct UserView: View {
                                         fromSearch: false
                                     )
                                     .environmentObject(user)
+                                    .environmentObject(food)
                                 } label: {
                                     HStack{
                                         Text(dish.name.capitalized)
@@ -153,15 +154,16 @@ struct ShadowModifier: ViewModifier {
         content
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.clear)  // Clear stroke to apply the shadow
+                    .stroke(Color.clear)
             )
-            .shadow(color: Color.black.opacity(0.02), radius: 5, x: 0, y: 0)  // First shadow
-            .shadow(color: Color.black.opacity(0.06), radius: 10, x: 0, y: 2)  // Second shadow
-            .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 0)  // Third shadow
+            .shadow(color: Color.black.opacity(0.02), radius: 5, x: 0, y: 0)
+            .shadow(color: Color.black.opacity(0.06), radius: 10, x: 0, y: 2)
+            .shadow(color: Color.black.opacity(0.3), radius: 1, x: 0, y: 0)
     }
 }
 
 #Preview {
     UserView()
         .environmentObject(UserStore())
+        .environmentObject(FoodPurineStore())
 }

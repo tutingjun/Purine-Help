@@ -58,10 +58,11 @@ struct PhotoView: View {
                                         NavigationLink{
                                             DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
                                                 .environmentObject(user)
+                                                .environmentObject(food)
                                         } label: {
                                             VStack (spacing: 8){
                                                 HStack {
-                                                    Text(prediction.label.capitalized)
+                                                    Text(Helper.formatPredictionLabel(prediction.label).capitalized)
                                                         .font(.headline)
                                                     
                                                     Spacer()

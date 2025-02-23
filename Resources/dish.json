@@ -1,0 +1,1277 @@
+[
+  {
+    "name": "apple pie",
+    "ingredients": ["Whole-grain wheat flour", "Butter"],
+    "description": "Apple pie, depending on the recipe, can be moderately purine-containing. Whole-grain wheat flour is generally low in purines, making the crust acceptable. However, butter, while low in purines itself, is a high-fat ingredient. High-fat diets can hinder uric acid excretion, potentially worsening gout. Therefore, while apple pie might not be a high-purine food, moderation is key due to its fat content, and individuals should consider portion sizes and overall dietary fat intake.\n",
+    "id": 0
+  },
+  {
+    "name": "baby back ribs",
+    "ingredients": ["Sauce, barbecue", "Pork ribs, raw"],
+    "description": "Baby back ribs, particularly due to the pork ribs component, are considered a high-purine food and should be consumed sparingly or avoided altogether if you have gout. Purines break down into uric acid, which can crystallize in your joints and trigger gout flares. While barbecue sauce can add to the enjoyment, it doesn't significantly impact the purine content compared to the ribs themselves. Opting for lean protein sources and limiting your portion size of baby back ribs is advisable to manage your uric acid levels effectively.\n",
+    "id": 1
+  },
+  {
+    "name": "baklava",
+    "ingredients": [
+      "Butter",
+      "Honey",
+      "Whole-grain wheat flour",
+      "Almonds",
+      "Walnuts"
+    ],
+    "description": "Baklava presents a mixed bag for gout patients due to its potential purine content. While honey and butter are generally low in purines, the nuts (almonds and walnuts) and whole-grain wheat flour contain moderate levels. Therefore, enjoying baklava occasionally in small portions is likely acceptable, but frequent or large servings could contribute to increased uric acid levels. Be mindful of the quantity and consider balancing it with plenty of water and other low-purine foods in your diet. It's always best to consult with your doctor or a registered dietitian for personalized advice.\n",
+    "id": 2
+  },
+  {
+    "name": "beef carpaccio",
+    "ingredients": ["Beef, tenderloin, raw", "Beef sirloin, raw"],
+    "description": "Beef carpaccio, made from raw beef tenderloin or sirloin, is generally considered high in purines. Since purines break down into uric acid in the body, consuming beef carpaccio can potentially elevate uric acid levels. For gout patients, this increase can trigger or worsen gout flares. Therefore, it's advisable to limit or avoid beef carpaccio in your diet to help manage uric acid levels and reduce the risk of gout attacks. Choosing lower-purine protein sources like poultry or plant-based options may be more suitable. Always consult your doctor or a registered dietitian for personalized dietary advice.\n",
+    "id": 3
+  },
+  {
+    "name": "beef tartare",
+    "ingredients": [
+      "Beef, tenderloin, raw",
+      "Anchovy, canned",
+      "Egg, chicken, raw",
+      "Mustard",
+      "Onions, raw",
+      "Beef sirloin, raw",
+      "Beef heart, raw",
+      "Beef kidney, raw",
+      "Parsley, fresh",
+      "Beef liver, raw"
+    ],
+    "description": "Beef tartare, being primarily raw beef, poses a high risk for gout sufferers due to its purine content. Muscle meats like tenderloin and sirloin, even raw, contain moderate levels of purines. However, the inclusion of organ meats like liver, kidney, and heart, which are extremely high in purines, significantly elevates the overall purine load. Anchovies also contribute a notable amount of purines. Therefore, beef tartare should be avoided by individuals managing gout to prevent uric acid build-up and potential flare-ups. Other ingredients like egg, mustard, onions, and parsley are generally low in purines and less of a concern.\n",
+    "id": 4
+  },
+  {
+    "name": "beet salad",
+    "ingredients": ["Onions, raw", "Carrots, raw", "Spinach, raw"],
+    "description": "Beet salad, with ingredients like onions, carrots, and spinach, is generally a good choice for gout patients concerned about purine intake. Beets themselves are low in purines. While spinach contains moderate purines, the overall purine content of a typical beet salad is likely low. Onions and carrots are considered very low in purines. Enjoying beet salad in moderation shouldn't significantly impact uric acid levels. However, it's always wise to monitor your individual response to foods and consult with your doctor or a registered dietitian for personalized dietary advice.\n",
+    "id": 5
+  },
+  {
+    "name": "beignets",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Bread flour",
+      "Yeast, dried",
+      "Pastry flour",
+      "Cake flour",
+      "Milk"
+    ],
+    "description": "Beignets, while delicious, can be a concern for gout patients due to some of their ingredients. The combination of butter and milk contains moderate amounts of purines, which can break down into uric acid and potentially trigger gout flare-ups. Eggs are generally considered low in purines and safe to consume in moderation. The flours and yeast themselves are not high in purines, but the overall effect of consuming a beignet depends on the quantity and frequency. Enjoying them occasionally and in small portions is key to managing your purine intake.\n",
+    "id": 6
+  },
+  {
+    "name": "bibimbap",
+    "ingredients": [
+      "Rice, white, cooked",
+      "Egg, chicken, raw",
+      "Carrots, raw",
+      "Mushrooms (not further specified), raw",
+      "Tofu, raw (nigari)",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Sesame",
+      "Spinach, raw",
+      "Beans, adzuki, dried, raw",
+      "Beef, ground, cooked"
+    ],
+    "description": "Bibimbap's purine content varies depending on the specific ingredients used. Generally, rice, eggs, carrots, spinach, and sesame are low in purines and safe for gout patients. However, ingredients like mushrooms, tofu, soy sauce, adzuki beans, and especially beef can significantly increase purine intake. If you have gout, be mindful of the amounts of these higher-purine ingredients in your bibimbap. Consider substituting beef with a low-purine protein source or asking for a version with fewer mushrooms, beans, or soy sauce to manage your purine intake effectively.\n",
+    "id": 7
+  },
+  {
+    "name": "bread pudding",
+    "ingredients": [
+      "Butter",
+      "Bread (no further specified)",
+      "Bread, white",
+      "Bread flour",
+      "Egg, chicken, raw",
+      "Bread, crusty (baguette)",
+      "Cream, animal, fresh",
+      "Cheese, grated",
+      "Milk"
+    ],
+    "description": "Bread pudding is likely to be moderate in purines, depending on the specific ingredients. The milk, eggs, and bread itself are generally low in purines. However, ingredients like butter and cheese may contribute a small amount of purines. Be mindful of the type of bread used; enriched white bread is preferable to whole-wheat varieties. Portion control is key, as larger servings can increase your overall purine intake. If you're concerned, consider making bread pudding at home to control the ingredients and minimize potential purine sources.\n",
+    "id": 8
+  },
+  {
+    "name": "breakfast burrito",
+    "ingredients": [
+      "Egg, chicken, raw",
+      "Bread, white",
+      "Pork roast and chops, cooked",
+      "Beans, pinto, dried, raw",
+      "Onions, raw",
+      "Cheese, grated",
+      "Chicken breast, roasted",
+      "Beef, ground, cooked",
+      "Cheese, processed"
+    ],
+    "description": "A breakfast burrito's purine content can vary greatly depending on its ingredients. Eggs, white bread, and cheese are generally low in purines and safe for gout patients. However, ingredients like cooked pork, beef, chicken, and pinto beans contain moderate to high levels of purines, which can elevate uric acid and potentially trigger gout flares. Limiting the portion size of these higher-purine ingredients or choosing a burrito with primarily low-purine components is advisable for managing gout. Always check the specific ingredients of your burrito to make informed dietary choices.\n",
+    "id": 9
+  },
+  {
+    "name": "bruschetta",
+    "ingredients": [
+      "Onions, raw",
+      "Bread, crusty (baguette)",
+      "Parsley, fresh",
+      "Garlic, raw",
+      "Tomatoes, no further specified"
+    ],
+    "description": "Bruschetta, a popular appetizer, can be a mixed bag for gout patients watching their purine intake. The bread is generally low in purines. However, the onions and garlic, while flavorful, contain moderate levels and could contribute to purine buildup if consumed in large quantities. Tomatoes and parsley are generally considered low-purine ingredients. Therefore, enjoying bruschetta in moderation is key. Pay attention to the amount of onions and garlic used and consider making adjustments to the recipe to minimize their impact on your uric acid levels.\n",
+    "id": 10
+  },
+  {
+    "name": "caesar salad",
+    "ingredients": [
+      "Anchovy, canned",
+      "Egg, chicken, raw",
+      "Mustard",
+      "Bread, crusty (baguette)",
+      "Mayonnaise",
+      "Lettuce",
+      "Cheese, grated",
+      "Garlic, raw"
+    ],
+    "description": "Caesar salad's impact on purine intake varies greatly depending on the specific ingredients and their quantities.  While lettuce and some components like mustard and garlic are low in purines, other ingredients can be problematic for gout. Anchovies, often included in the dressing, are very high in purines.  Cheese and eggs are moderate sources. The overall purine content will depend on the portion size and the amounts of high-purine ingredients like anchovies. It's best to ask about the specific ingredients and their amounts when ordering or preparing Caesar salad, and consider requesting it without anchovies or with a modified dressing.\n",
+    "id": 11
+  },
+  {
+    "name": "cannoli",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Cheese, cottage",
+      "Egg, chicken, raw",
+      "Pastry flour",
+      "Cream, animal, fresh",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Cannoli, unfortunately, aren't a gout-friendly choice due to several high-purine ingredients. The pastry itself, made with white flour, and the creamy filling often containing milk, butter, and sometimes cheese, contribute to purine intake. Even the egg in the dough can slightly elevate purine levels. While a small amount might not trigger a flare, regular consumption could increase uric acid levels. Consider this treat a \"sometimes\" indulgence and be mindful of portion sizes if you have gout.\n",
+    "id": 12
+  },
+  {
+    "name": "caprese salad",
+    "ingredients": ["Tomatoes, no further specified", "Cheese, grated"],
+    "description": "For gout patients, Caprese salad can be a generally safe choice, but be mindful of the cheese. Tomatoes are low in purines and unlikely to trigger gout flares. However, cheese, especially hard, aged varieties, can contain moderate levels of purines. While not as high-purine as meat or seafood, excessive cheese consumption could contribute to elevated uric acid levels. Therefore, enjoy Caprese salad in moderation and consider using fresh mozzarella, which generally has lower purine content than aged cheese. Always monitor your individual tolerance and consult with your doctor or dietitian for personalized advice.\n",
+    "id": 13
+  },
+  {
+    "name": "carrot cake",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Carrots, raw",
+      "Whole-grain wheat flour",
+      "Yogurt (not further specified)",
+      "Milk"
+    ],
+    "description": "Carrot cake, while a delicious treat, can be moderate in purines due to ingredients like whole-wheat flour and milk. Eggs are generally low in purines. However, the butter and yogurt contribute minimal purines. Therefore, enjoy carrot cake in moderation if you have gout. Consider portion size and frequency, and factor in other purine sources in your diet that day. If you are concerned, you can consider making a modified version at home with lower-purine flour or milk alternatives.\n",
+    "id": 14
+  },
+  {
+    "name": "ceviche",
+    "ingredients": [
+      "Mackerel, raw (unspecified)",
+      "Anchovy, canned",
+      "Herring, canned",
+      "Clams, canned",
+      "Clams, raw",
+      "Anchovy, raw",
+      "Oysters, canned",
+      "Salmon, canned",
+      "Mackerel, canned",
+      "Salmon, mixed species, raw"
+    ],
+    "description": "Ceviche, due to its common use of seafood, can be a concern for gout patients. Many of the potential ingredients like mackerel, anchovies, herring, clams, oysters, and salmon \u2013 whether raw or canned \u2013 are high in purines. Purines break down into uric acid, which can trigger gout flares. Therefore, it's best to avoid or severely limit ceviche consumption. If you do choose to eat it, be mindful of the specific fish used and consume it in very small portions, staying well-hydrated to help your body eliminate uric acid.\n",
+    "id": 15
+  },
+  {
+    "name": "cheesecake",
+    "ingredients": [
+      "Butter",
+      "Yogurt, plain",
+      "Egg, chicken, raw",
+      "Cheese, cottage",
+      "Egg, quail, raw",
+      "Cream, animal, fresh",
+      "Cream, vegetable, fresh",
+      "Cheese, grated",
+      "Milk",
+      "Cheese, processed"
+    ],
+    "description": "Cheesecake is generally considered moderate in purines due to its dairy and egg content. Ingredients like butter, yogurt, cottage cheese, and milk contain some purines, but in lower amounts than meat or seafood. Processed cheese might have slightly higher purine levels depending on additives. While not a high-purine food, gout patients should consume cheesecake in moderation and consider it within their overall purine intake goals. Individual tolerance varies, so monitoring your body's response after consumption is always recommended.\n",
+    "id": 16
+  },
+  {
+    "name": "cheese plate",
+    "ingredients": ["Cheese, cottage", "Cheese, grated", "Cheese, processed"],
+    "description": "A cheese plate typically includes various cheeses like cottage, grated, and processed cheese. These cheeses are generally considered low in purines, making them a suitable choice for individuals managing gout. While cheese can be enjoyed in moderation, be mindful of portion sizes and other accompaniments on the plate. Some cheese plates might include high-purine items like certain meats or seafood, which should be limited or avoided. Always check the ingredient list and opt for lower-purine options to help manage your gout symptoms.\n",
+    "id": 17
+  },
+  {
+    "name": "chicken curry",
+    "ingredients": [
+      "Chicken thigh, raw",
+      "Chicken breast, raw",
+      "Chicken neck, raw",
+      "Chicken gizzard, raw",
+      "Chicken liver, raw",
+      "Chicken breast, roasted",
+      "Chicken skin, raw",
+      "Chicken breast, stewed",
+      "Chicken heart, raw",
+      "Chicken drumstick, raw"
+    ],
+    "description": "Chicken curry can be a concern for gout patients due to the varying purine content of its potential ingredients. While chicken breast and thigh are moderate in purines, organ meats like chicken liver, gizzard, and heart are very high in purines. Chicken skin and neck also contribute to a higher purine load. Roasting or stewing the chicken doesn't significantly reduce purine levels. Therefore, if you have gout, it's best to limit or avoid chicken curry, especially if it contains organ meats or skin. Opt for versions made primarily with chicken breast and consume in moderation, alongside plenty of water.\n",
+    "id": 18
+  },
+  {
+    "name": "chicken quesadilla",
+    "ingredients": [
+      "Pepper, green",
+      "Whole-grain wheat flour",
+      "Onions, raw",
+      "Chicken breast, raw",
+      "Cheese, grated",
+      "Tomatoes, no further specified"
+    ],
+    "description": "A chicken quesadilla can be tricky for gout patients due to its potential purine content. While ingredients like green pepper, whole-grain wheat flour, onions, and tomatoes are generally low in purines, chicken breast and cheese contribute moderate levels. Therefore, a chicken quesadilla should be consumed in moderation.  Consider limiting portion size and perhaps substituting chicken with vegetables to reduce purine intake.  Keep in mind individual tolerance varies, so monitor your symptoms after consumption.\n",
+    "id": 19
+  },
+  {
+    "name": "chicken wings",
+    "ingredients": [
+      "Chicken thigh, raw",
+      "Chicken wing, raw",
+      "Chicken breast, raw",
+      "Chicken neck, raw",
+      "Chicken gizzard, raw",
+      "Chicken liver, raw",
+      "Chicken, ground, raw",
+      "Chicken skin, raw",
+      "Chicken heart, raw",
+      "Chicken drumstick, raw"
+    ],
+    "description": "Chicken wings, like other chicken parts, contain moderate levels of purines. For gout patients, this means that while you don't necessarily need to eliminate chicken wings entirely, moderation is key. Enjoying them occasionally in smaller portions is preferable to frequent, large servings. Be mindful of how you prepare them; grilling or baking is better than frying, as added fats can also exacerbate gout symptoms. Consider balancing your meal with low-purine foods like vegetables and whole grains to help manage your overall purine intake.\n",
+    "id": 20
+  },
+  {
+    "name": "chocolate cake",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Honey",
+      "Whole-grain wheat flour",
+      "Cake flour",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Chocolate cake, while a delicious treat, can be a moderate concern for gout patients due to its ingredients. Some components like butter and milk contain purines, though in relatively low amounts. The presence of chocolate itself also contributes a small amount of purines. Honey and refined flours are generally considered low in purines. It's the combination of these ingredients, along with portion size, that makes chocolate cake something to enjoy in moderation, rather than as a regular dietary staple, if you're managing gout.\n",
+    "id": 21
+  },
+  {
+    "name": "chocolate mousse",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Cream, animal, fresh",
+      "Chocolate",
+      "Yogurt (not further specified)",
+      "Milk"
+    ],
+    "description": "Chocolate mousse, with its blend of ingredients like butter, eggs, cream, chocolate, yogurt, and milk, presents a moderate concern for gout sufferers due to potential purine content. While chocolate itself is relatively low in purines, dairy products like cream and milk can contain moderate levels. The overall impact on your purine intake will depend on the specific recipe and portion size. It's best to consume chocolate mousse in moderation and be mindful of other purine-rich foods in your diet. Consider smaller portions or exploring recipes that minimize dairy content if you're closely managing your gout.\n",
+    "id": 22
+  },
+  {
+    "name": "churros",
+    "ingredients": [
+      "Butter",
+      "Bread flour",
+      "Egg, chicken, raw",
+      "Honey",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Churros, while delicious, can pose a moderate purine risk for gout patients. Bread flour and butter are generally low in purines and fine to consume in moderation. However, milk contains moderate purines, and ingredients like honey or chocolate may indirectly impact gout by contributing to weight gain and insulin resistance, factors that can worsen gout. Eggs are generally considered safe. Because churros are often fried, the added fats could also exacerbate inflammation. Enjoy churros sparingly and consider making them at home with purine-conscious modifications like using less butter or milk.\n",
+    "id": 23
+  },
+  {
+    "name": "clam chowder",
+    "ingredients": [
+      "Anchovy, canned",
+      "Clams, canned",
+      "Tuna, canned",
+      "Clams, raw",
+      "Soup, clam chowder type, powdered",
+      "Oysters, canned",
+      "Salmon, canned",
+      "Mackerel, canned",
+      "Cod, fresh",
+      "Sauce, oyster"
+    ],
+    "description": "Clam chowder can be a concern for gout patients due to its potential for high purine content. Many of its common ingredients, like clams, anchovies, oysters, and certain canned fish (tuna, salmon, mackerel), are known to be high in purines. Purines break down into uric acid, which can trigger gout flares. Depending on the specific recipe and ingredients used, clam chowder can significantly contribute to your daily purine intake. Opting for homemade versions where you can control ingredients and avoid high-purine seafood, or limiting portion sizes when eating commercially prepared chowder, are helpful strategies.\n",
+    "id": 24
+  },
+  {
+    "name": "club sandwich",
+    "ingredients": ["Bread, white", "Mayonnaise", "Chicken breast, roasted"],
+    "description": "A club sandwich can be a mixed bag for gout patients due to its potential purine content. White bread and mayonnaise are generally low in purines and considered safe. However, roasted chicken breast contains moderate levels of purines. While not as high as organ meats or some seafood, consuming large portions of chicken regularly could contribute to elevated uric acid levels and potentially trigger gout flare-ups. Consider limiting your portion size or opting for a sandwich with lower-purine protein options like egg salad.\n",
+    "id": 25
+  },
+  {
+    "name": "crab cakes",
+    "ingredients": [
+      "Bread, white",
+      "Clams, canned",
+      "Egg, chicken, raw",
+      "Tuna, canned",
+      "Clams, raw",
+      "Shrimp, raw (unspecified)",
+      "Mayonnaise",
+      "Shrimp, deep-water",
+      "Crab, red king, raw",
+      "Salmon, canned"
+    ],
+    "description": "Crab cakes pose a moderate risk for gout sufferers due to the purine content in many of their common ingredients. Shellfish like crab, clams, and shrimp are known to be higher in purines, which break down into uric acid and can trigger gout flares. Canned fish such as tuna and salmon also contribute to purine intake. While other ingredients like bread, eggs, and mayonnaise are generally low in purines, the overall purine load of crab cakes depends heavily on the proportion and type of seafood used. Therefore, enjoy crab cakes sparingly and consider portion control to manage your uric acid levels.\n",
+    "id": 26
+  },
+  {
+    "name": "creme brulee",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Honey",
+      "Cream, animal, fresh",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Creme brulee, with its rich ingredients like butter, eggs, cream, and milk, can be a moderate concern for gout patients due to purine content. While eggs and dairy are generally lower in purines, the overall richness of creme brulee means it's best enjoyed in moderation. Be mindful that individual ingredients like chocolate, if added, can contribute a small amount of purines. Honey is very low in purines. Consuming a small portion occasionally is unlikely to significantly impact your uric acid levels, but frequent or large servings could potentially be a factor in gout flare-ups.\n",
+    "id": 27
+  },
+  {
+    "name": "croque madame",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Egg, chicken, raw",
+      "Cheese, grated",
+      "Ham, pressed and boneless types"
+    ],
+    "description": "A croque madame, with its ingredients like white bread, ham, cheese, eggs, and butter, can be a mixed bag for gout patients. White bread and cheese are generally low in purines. However, ham can contain moderate levels of purines, potentially increasing uric acid levels. Eggs are considered low-purine. The overall impact depends on the quantity of ham used. Consuming a croque madame occasionally might be acceptable, but frequent consumption, especially with a large amount of ham, could contribute to gout flares. It's best to enjoy it in moderation and consider the overall purine content of your diet.\n",
+    "id": 28
+  },
+  {
+    "name": "cup cakes",
+    "ingredients": [
+      "Butter",
+      "Bread flour",
+      "Egg, chicken, raw",
+      "Honey",
+      "Pastry flour",
+      "Cream, animal, fresh",
+      "Cream, vegetable, fresh",
+      "Cake flour",
+      "Chocolate",
+      "Cheese, grated",
+      "Milk"
+    ],
+    "description": "Cupcakes, unfortunately, can be a mixed bag for gout patients due to their potential ingredients. While some components like milk and eggs are generally considered low in purines, others such as butter, bread flour, cake flour, and chocolate may contribute moderate amounts. Depending on the recipe, ingredients such as honey, cream, and grated cheese may also be added. Excessive consumption of cupcakes could potentially elevate your overall purine intake, so moderation is key. Consider smaller portions and pay attention to the specific ingredients to manage your gout effectively.\n",
+    "id": 29
+  },
+  {
+    "name": "deviled eggs",
+    "ingredients": ["Egg, chicken, raw", "Mayonnaise", "Mustard"],
+    "description": "Deviled eggs, while a tasty treat, can be a moderate concern for gout patients due to the mayonnaise and mustard. Eggs themselves are low in purines and generally safe. However, mayonnaise is often made with soybean oil, which can contribute to inflammation. Mustard, while typically low in purines, may contain ingredients that can exacerbate gout symptoms in some individuals. Therefore, consuming deviled eggs in moderation is advisable, and it's best to be mindful of individual reactions to the added ingredients.\n",
+    "id": 30
+  },
+  {
+    "name": "donuts",
+    "ingredients": [
+      "Butter",
+      "Bread flour",
+      "Egg, chicken, raw",
+      "Honey",
+      "Yeast, dried",
+      "Cake flour",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Donuts, while delicious, can be a moderate concern for gout patients due to their ingredients. The combination of ingredients like butter, flour, eggs, and even milk can contribute to your overall purine intake. While none of these ingredients are exceptionally high in purines, the cumulative effect, especially with frequent consumption, could potentially elevate uric acid levels. The added sugar from honey or chocolate can also indirectly impact uric acid by affecting insulin levels. Enjoy donuts sparingly as part of a balanced diet and consider smaller portions to minimize any potential impact on your gout.\n",
+    "id": 31
+  },
+  {
+    "name": "dumplings",
+    "ingredients": [
+      "Rice, white, cooked",
+      "Egg, chicken, raw",
+      "Whole-grain wheat flour",
+      "Spaghetti",
+      "Chicken breast, raw",
+      "Pork ribs, raw",
+      "Pork, bacon, unprepared",
+      "Beef, ground, cooked",
+      "Udon (wheat noodles)",
+      "Chicken, ground, raw"
+    ],
+    "description": "Dumplings can be a concern for gout patients due to their potential for high purine content, depending on the filling. While the dough (made from ingredients like rice, wheat flour, or noodles) is generally low in purines, fillings containing meats like chicken, pork, or beef can significantly increase the purine load. Ground meats, especially, tend to be higher in purines. Therefore, choosing dumplings with vegetable-based fillings or limiting portion sizes is advisable. Always check the ingredient list or ask about the filling composition to manage your purine intake effectively.\n",
+    "id": 32
+  },
+  {
+    "name": "edamame",
+    "ingredients": ["Soybeans, green, raw"],
+    "description": "Edamame, or young green soybeans, is generally considered a safe and even beneficial food for people with gout. While soybeans do contain purines, studies suggest that the purines in soy don't raise uric acid levels in the same way as those found in meat and seafood. In fact, some research indicates that soy products like edamame may even have a protective effect against gout. You can typically enjoy edamame as part of a balanced diet without significantly increasing your risk of gout flares. However, moderation is always key, and it's best to discuss your specific dietary needs with your doctor or a registered dietitian.\n",
+    "id": 33
+  },
+  {
+    "name": "eggs benedict",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Egg, chicken, raw",
+      "Mustard",
+      "Mayonnaise",
+      "Ham, pressed and boneless types"
+    ],
+    "description": "Eggs Benedict can be a mixed bag for gout patients due to its varying ingredients. While eggs themselves are low in purines, other components can pose a risk. The white bread and butter are generally low-purine, but ham is a high-purine ingredient that should be limited or avoided. Mayonnaise and mustard are typically fine in moderation. Overall, Eggs Benedict is not a gout-friendly choice due to the ham content. If you are concerned about purine intake, it is best to limit your intake of this dish or ask for it without ham.\n",
+    "id": 34
+  },
+  {
+    "name": "escargots",
+    "ingredients": ["Garlic, raw", "Parsley, fresh", "Snails, raw", "Butter"],
+    "description": "Escargots, or snails, should be consumed cautiously by gout patients. Snails themselves are considered a moderate-purine food. While the other ingredients commonly used in escargots, such as garlic, parsley, and butter, are low in purines and generally safe, the purine content of the snails themselves can contribute to increased uric acid levels. Therefore, if you have gout, it's best to enjoy escargots sparingly and consider balancing your meal with plenty of low-purine foods and staying well-hydrated to help your body eliminate uric acid.\n",
+    "id": 35
+  },
+  {
+    "name": "falafel",
+    "ingredients": [
+      "Garlic, raw",
+      "Chickpeas (garbanzo beans), dried, raw",
+      "Onions, raw",
+      "Parsley, fresh"
+    ],
+    "description": "Falafel, primarily made from chickpeas, can be a moderate concern for gout patients. Chickpeas contain purines, which break down into uric acid, potentially triggering gout flares. However, the purine content is not as high as in some meats or seafood. Other ingredients like garlic, onions, and parsley are generally considered low in purines and safe to consume. Moderation is key when including falafel in your diet, and it's best to balance it with plenty of low-purine foods and stay well-hydrated to help your body flush out uric acid.\n",
+    "id": 36
+  },
+  {
+    "name": "filet mignon",
+    "ingredients": ["Beef, tenderloin, raw", "Beef sirloin, raw"],
+    "description": "Filet mignon, being a cut of beef, contains a moderate amount of purines. For gout patients, this means it's not the worst offender, but should still be consumed in moderation. Red meat generally breaks down into uric acid, which can trigger gout flares if levels are too high. Opting for smaller portions and less frequent consumption of filet mignon, while prioritizing low-purine foods in your diet, can help you manage your uric acid levels and reduce your risk of gout attacks.\n",
+    "id": 37
+  },
+  {
+    "name": "fish and chips",
+    "ingredients": [
+      "Bread (no further specified)",
+      "Cod, fresh",
+      "Potato, raw"
+    ],
+    "description": "Fish and chips can be a concern for gout patients due to its potential purine content. While potatoes are generally low in purines, cod is a moderate purine source, which could raise uric acid levels. The breading, depending on its ingredients, might contribute a small amount of purines as well. Furthermore, the frying process often involves oils that can hinder uric acid excretion. Therefore, consuming fish and chips regularly might not be ideal for individuals managing gout. Consider smaller portions or baked fish with plain potatoes as a lower-purine alternative.\n",
+    "id": 38
+  },
+  {
+    "name": "foie gras",
+    "ingredients": [
+      "Pate, liver",
+      "Monkfish liver, raw",
+      "Pork liver, raw",
+      "Lamb liver, raw",
+      "Chicken liver, raw",
+      "Monkfish liver, steamed",
+      "Beef liver, raw",
+      "Foie gras"
+    ],
+    "description": "Foie gras is very high in purines and should be avoided by individuals with gout. As it's essentially duck or goose liver, it shares the same concerns as other organ meats. High purine content can lead to increased uric acid levels in the blood, triggering gout attacks. Opting for lower-purine protein sources is crucial for managing gout symptoms and preventing flare-ups. Even small portions of foie gras can significantly contribute to purine intake.\n",
+    "id": 39
+  },
+  {
+    "name": "french fries",
+    "ingredients": ["Potato, raw"],
+    "description": "French fries, primarily made from potatoes, are generally considered low in purines. Potatoes themselves are a safe choice for gout patients. However, keep in mind that the preparation method can influence the overall impact. Deep-frying in oil, especially if the oil is reused or contains animal fats, could potentially add some purines to the fries. Additionally, toppings like gravy or certain sauces might contain higher purine ingredients. Therefore, while french fries themselves are not a major concern, moderation and attention to the cooking method and added toppings are important for managing gout.\n",
+    "id": 40
+  },
+  {
+    "name": "french onion soup",
+    "ingredients": [
+      "Butter",
+      "Onions, raw",
+      "Bread, crusty (baguette)",
+      "Cheese, grated",
+      "Soup, consomm\u00e9 type, powdered",
+      "Garlic, raw"
+    ],
+    "description": "French onion soup can be a mixed bag for gout patients. Onions, while generally safe in moderation, do contain some purines. The consomm\u00e9-type soup base, especially if powdered, might contain ingredients with higher purine levels. Butter, garlic, and cheese are typically low in purines and less of a concern. However, the crusty bread served with the soup can contribute to overall carbohydrate intake, which can indirectly affect uric acid levels. Therefore, enjoy French onion soup sparingly, and consider making it at home with fresh ingredients to control the purine content.\n",
+    "id": 41
+  },
+  {
+    "name": "french toast",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Egg, chicken, raw",
+      "Honey",
+      "Milk"
+    ],
+    "description": "French toast can be a moderate concern for gout patients due to its potential purine content. White bread and milk contain some purines, though not excessively high. Eggs are generally considered low in purines. However, butter and honey are virtually purine-free. The overall purine load of French toast depends on the specific recipe and portion size. Enjoying it occasionally in moderation is likely acceptable, but be mindful of the ingredients and consider opting for whole-wheat bread, which can be a healthier choice.\n",
+    "id": 42
+  },
+  {
+    "name": "fried calamari",
+    "ingredients": [
+      "Bread, white",
+      "Egg, chicken, raw",
+      "Squid, raw (unspecified)"
+    ],
+    "description": "Fried calamari is generally not gout-friendly due to several factors. Squid itself contains moderate levels of purines, which break down into uric acid and can trigger gout flares. The breading, often made with white bread, adds refined carbohydrates that can worsen inflammation. Furthermore, the frying process in oil introduces unhealthy fats, potentially exacerbating inflammation. The egg used in the batter doesn't significantly impact purine levels. Therefore, individuals with gout should consume fried calamari sparingly, if at all, to manage uric acid levels.\n",
+    "id": 43
+  },
+  {
+    "name": "fried rice",
+    "ingredients": [
+      "Egg, chicken, raw",
+      "Rice, white, raw",
+      "Carrots, raw",
+      "Onions, raw",
+      "Chicken breast, raw",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Peas, green",
+      "Rice, white, cooked",
+      "Garlic, raw",
+      "Mushrooms (not further specified), raw"
+    ],
+    "description": "Fried rice can be a mixed bag for gout patients due to its varied ingredients. While rice itself is low in purines, the addition of ingredients like chicken, peas, and mushrooms can significantly increase the purine content. Soy sauce also contributes some purines. If you enjoy fried rice, opt for versions with minimal amounts of high-purine ingredients like chicken or mushrooms, and load up on low-purine vegetables like carrots and onions. Consider using low-sodium soy sauce to further reduce potential health impacts.\n",
+    "id": 44
+  },
+  {
+    "name": "frozen yogurt",
+    "ingredients": [
+      "Yogurt, plain",
+      "Honey",
+      "Fruit juice",
+      "Yogurt, liquid",
+      "Yogurt (not further specified)"
+    ],
+    "description": "Frozen yogurt is generally considered a low-purine option, making it a suitable treat for gout patients. Plain yogurt, a key ingredient, is low in purines. Added ingredients like honey and fruit juice are also low-purine choices. However, be mindful of the specific type and quantity of fruit juice, as excessive fructose intake might indirectly affect uric acid levels. Overall, frozen yogurt can be enjoyed in moderation as part of a gout-friendly diet, but always check the label for any high-purine additions.\n",
+    "id": 45
+  },
+  {
+    "name": "garlic bread",
+    "ingredients": [
+      "Butter",
+      "Bread, crusty (baguette)",
+      "Bread, white",
+      "Garlic, raw"
+    ],
+    "description": "Garlic bread can be a mixed bag for gout patients. The garlic itself is generally considered low in purines and safe to consume. However, the bread component, especially if made with white bread, contributes a moderate amount of purines. The butter content, being mostly fat, has a negligible impact on purine levels. Therefore, garlic bread in moderation is likely acceptable, but consider choosing whole-wheat bread options when available to potentially lower the purine content and be mindful of portion sizes.\n",
+    "id": 46
+  },
+  {
+    "name": "gnocchi",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Bread, white",
+      "Cheese, cottage",
+      "Whole-grain wheat flour",
+      "Cheese, grated",
+      "Potato, raw",
+      "Milk",
+      "Cheese, processed"
+    ],
+    "description": "Gnocchi, being primarily made from potatoes and flour, are generally considered a moderate purine food. However, the other ingredients used can significantly impact its suitability for gout patients. Be cautious of gnocchi made with purine-rich ingredients like butter, cheese (especially processed or aged), and whole-wheat flour. Opt for gnocchi made with potato, egg, and white flour as they are lower in purines. Always check the ingredient list and prepare gnocchi with low-purine ingredients at home to control your purine intake.\n",
+    "id": 47
+  },
+  {
+    "name": "greek salad",
+    "ingredients": [
+      "Cheese, cottage",
+      "Onions, raw",
+      "Lettuce",
+      "Tomatoes, no further specified",
+      "Cucumber, raw"
+    ],
+    "description": "Greek salad, depending on its exact ingredients, can be a generally gout-friendly choice. Most components like lettuce, tomatoes, and cucumber are low in purines. Raw onions are considered moderate, so portion size is key. Cottage cheese, although dairy, is often consumed in small amounts and dairy has actually been shown to be beneficial for gout. Focus on limiting the cheese (if included) and go easy on the onions to minimize purine intake, and you can enjoy a refreshing Greek salad as part of your gout-friendly diet.\n",
+    "id": 48
+  },
+  {
+    "name": "grilled cheese sandwich",
+    "ingredients": ["Butter", "Bread, white", "Cheese, processed"],
+    "description": "For gout patients, a grilled cheese sandwich presents a moderate purine concern. White bread and butter generally have low purine content and are unlikely to significantly raise uric acid levels. However, processed cheese can sometimes contain additives or have a slightly higher purine content than some natural cheeses. While not a high-purine food, frequent consumption of grilled cheese sandwiches, especially with heavily processed cheese, might contribute to overall purine intake, so moderation is key. Consider using natural cheeses and limiting your portion size for a gout-friendlier option.\n",
+    "id": 49
+  },
+  {
+    "name": "grilled salmon",
+    "ingredients": ["Salmon, mixed species, raw", "Salmon, canned"],
+    "description": "Grilled salmon is a moderate purine food, meaning it contains a higher purine level than low-purine options but less than high-purine choices. While not as high in purines as some other seafood, it's still important to consider portion sizes. Enjoying grilled salmon in moderation, perhaps once or twice a week, is generally acceptable for most gout patients. However, individual tolerance varies, so it's wise to monitor your symptoms and adjust your intake accordingly. Canned salmon may be a suitable alternative, but always check the label for added ingredients that could impact your gout.\n",
+    "id": 50
+  },
+  {
+    "name": "guacamole",
+    "ingredients": [
+      "Onions, raw",
+      "Tomatoes, no further specified",
+      "Coriander",
+      "Avocado, raw"
+    ],
+    "description": "Guacamole, made with ingredients like avocado, tomatoes, coriander, and onions, is generally a good choice for those managing gout. Avocados are low in purines, making them a safe base. Tomatoes and coriander are also considered low-purine vegetables. While onions do contain some purines, they are typically consumed in moderation within guacamole, posing a minimal risk for triggering gout flares. Enjoying guacamole can be a flavorful and healthy way to add variety to your diet without significantly increasing your purine intake.\n",
+    "id": 51
+  },
+  {
+    "name": "gyoza",
+    "ingredients": [
+      "Chicken thigh, raw",
+      "Chicken breast, raw",
+      "Cabbage, raw",
+      "Ginger root, raw",
+      "Sesame",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Pork ribs, raw",
+      "Pork, bacon, unprepared",
+      "Garlic, raw",
+      "Chicken, ground, raw"
+    ],
+    "description": "Gyoza can be a concern for gout sufferers due to the potential for high purine content depending on the filling. Key ingredients like chicken (especially dark meat like chicken thigh or ground chicken) and pork, including bacon and ribs, are higher in purines. Soy sauce also contributes, though in smaller amounts. Cabbage, ginger, garlic, and sesame are generally low in purines and less of a worry. Limiting your intake or choosing gyoza with fillings primarily composed of vegetables will help manage your purine intake and reduce the risk of gout flares.\n",
+    "id": 52
+  },
+  {
+    "name": "hamburger",
+    "ingredients": [
+      "Bread, white",
+      "Mustard",
+      "Onions, raw",
+      "Ketchup",
+      "Beef, ground, cooked",
+      "Cheese, processed"
+    ],
+    "description": "Hamburger can be a concern for gout patients due to its beef content. Ground beef, especially when cooked, contains moderate levels of purines, which break down into uric acid and can trigger gout flares. Other ingredients like ketchup and processed cheese may also contribute to purine intake, though to a lesser extent. Opting for smaller portions, leaner ground beef, and limiting high-purine toppings can help manage uric acid levels. Consider alternatives like chicken or turkey burgers for a lower-purine meal. Always consult with your doctor or a registered dietitian for personalized dietary advice.\n",
+    "id": 53
+  },
+  {
+    "name": "hot and sour soup",
+    "ingredients": [
+      "Tofu (Kinu)",
+      "Mushrooms, canned",
+      "Seaweed, wakame, raw",
+      "Ginger root, raw",
+      "Soup, stock, Chinese, dried",
+      "Sauce, chili bean, Chinese",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Bamboo shoots, raw",
+      "Garlic, raw",
+      "Mushrooms (not further specified), raw"
+    ],
+    "description": "Hot and sour soup's effect on purine intake for gout patients depends heavily on its ingredients. While some components like tofu and ginger are generally low in purines, others such as mushrooms, seaweed, and dried soup stock can contribute moderate to high levels. Soy sauce and chili bean sauce, though used in smaller quantities, should also be considered. Therefore, individuals with gout should be mindful of the specific ingredients and portion sizes of hot and sour soup, opting for homemade versions where possible to control purine content.\n",
+    "id": 54
+  },
+  {
+    "name": "hot dog",
+    "ingredients": ["Bread, white", "Ketchup", "Frankfurter", "Mustard"],
+    "description": "Hot dogs are generally high in purines due to their processed meat content, specifically the frankfurter. Frankfurters often contain organ meats and other meat byproducts, which are naturally rich in purines. Consuming hot dogs can significantly raise uric acid levels, potentially triggering gout flares. While the other potential ingredients like white bread, ketchup, and mustard are lower in purines, the high purine content of the frankfurter makes hot dogs a food best limited or avoided by individuals managing gout. Consider lower purine alternatives like chicken or plant-based sausages if you're craving a similar meal.\n",
+    "id": 55
+  },
+  {
+    "name": "huevos rancheros",
+    "ingredients": [
+      "Egg, chicken, raw",
+      "Pepper, green",
+      "Onions, raw",
+      "Beans, pinto, dried, raw",
+      "Cheese, grated",
+      "Tomatoes, no further specified"
+    ],
+    "description": "Huevos rancheros, while delicious, can be a mixed bag for gout patients due to purine content. Eggs, tomatoes, and peppers are generally low in purines and safe to consume. However, pinto beans are moderately high in purines, and onions may trigger gout flares in some individuals. Cheese is usually fine in moderation. Therefore, enjoy huevos rancheros cautiously. Consider reducing the portion of beans or substituting them with a low-purine vegetable. Be mindful of your individual triggers and monitor your uric acid levels.\n",
+    "id": 56
+  },
+  {
+    "name": "hummus",
+    "ingredients": [
+      "Garlic, raw",
+      "Chickpeas (garbanzo beans), dried, raw",
+      "Sesame"
+    ],
+    "description": "Hummus, made primarily from chickpeas, sesame (tahini), and garlic, is generally considered a moderate-purine food. While chickpeas do contain purines, the overall purine content in a typical serving of hummus is unlikely to significantly raise uric acid levels for most gout patients. Garlic and sesame are low in purines. Enjoying hummus in moderation as part of a balanced diet is usually acceptable, but individual tolerance varies. If you are concerned about your purine intake, it's always best to discuss your dietary choices with your doctor or a registered dietitian.\n",
+    "id": 57
+  },
+  {
+    "name": "ice cream",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Cheese, cottage",
+      "Honey",
+      "Yogurt, liquid",
+      "Cream, animal, fresh",
+      "Cream, vegetable, fresh",
+      "Yogurt (not further specified)",
+      "Milk",
+      "Cheese, processed"
+    ],
+    "description": "Ice cream, while a tasty treat, can be a mixed bag for gout patients regarding purine intake. The milk and cream base is generally low in purines. However, some ingredients commonly found in ice cream, like certain dairy products, can influence uric acid levels. While milk itself is low in purines, added ingredients like processed cheese may contain more purines. For gout patients, it's best to consume ice cream in moderation and be mindful of added ingredients, opting for simpler flavors and checking ingredient lists when possible.\n",
+    "id": 58
+  },
+  {
+    "name": "lasagna",
+    "ingredients": [
+      "Bread (no further specified)",
+      "Egg, chicken, raw",
+      "Cheese, grated",
+      "Beef, ground, cooked",
+      "Tomatoes, no further specified",
+      "Spaghetti"
+    ],
+    "description": "Lasagna can be a mixed bag for gout patients due to its varying ingredients. Beef is high in purines, so limiting portions or opting for a lower-purine meat alternative like chicken or vegetables is wise. Cheese and eggs are generally considered moderate in purines and can be consumed in moderation. Tomatoes are sometimes debated, but generally considered safe for most. Bread and spaghetti are low in purines. Preparing lasagna at home allows you to control the ingredients and prioritize lower-purine options to better manage your gout.\n",
+    "id": 59
+  },
+  {
+    "name": "lobster bisque",
+    "ingredients": [
+      "Butter",
+      "Anchovy, canned",
+      "Tuna, canned",
+      "Lobster, spiny, raw",
+      "Clams, raw",
+      "Shrimp, raw (sand shrimp and Pacific shrimp species)",
+      "Cream, animal, fresh",
+      "Shrimp, deep-water",
+      "Salmon, canned"
+    ],
+    "description": "Lobster bisque is generally not gout-friendly due to its high purine content. Several potential ingredients, such as lobster, shrimp, clams, anchovies, tuna, and salmon, are known to be high in purines. When these ingredients are combined in a concentrated soup like bisque, the purine levels can be significant. High purine intake can lead to elevated uric acid levels in the body, potentially triggering or worsening gout flares. Therefore, individuals with gout should consume lobster bisque sparingly or avoid it altogether.\n",
+    "id": 60
+  },
+  {
+    "name": "lobster roll sandwich",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Mayonnaise",
+      "Lobster, spiny, raw"
+    ],
+    "description": "A lobster roll sandwich can be problematic for gout patients due to its high purine content, primarily from the lobster itself. Lobster is considered a high-purine food, which means it can significantly increase uric acid levels in the body, potentially triggering gout flares. Other ingredients like butter and white bread offer minimal purines but contribute to overall calorie and fat intake, which can indirectly worsen gout. Mayonnaise, while low in purines, should be used sparingly due to its fat content. Therefore, limiting or avoiding lobster rolls is generally recommended for individuals managing gout.\n",
+    "id": 61
+  },
+  {
+    "name": "macaroni and cheese",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Spaghetti",
+      "Cheese, grated",
+      "Milk",
+      "Cheese, processed"
+    ],
+    "description": "Macaroni and cheese, while a comforting dish, can present some concerns for gout patients due to its potential purine content. Ingredients like processed cheese and milk contain moderate levels of purines, which break down into uric acid in the body, potentially triggering gout flare-ups. While not exceptionally high in purines, the cumulative effect of these ingredients, especially when consumed in large portions, should be considered. Opting for low-fat milk and limiting portion sizes can help minimize purine intake. Consider homemade versions with lower-purine cheese alternatives for a gout-friendlier option.\n",
+    "id": 62
+  },
+  {
+    "name": "macarons",
+    "ingredients": ["Chocolate", "Egg, chicken, raw", "Almonds"],
+    "description": "Macarons, while a delightful treat, can be a mixed bag for gout patients concerned about purine intake. Generally, macarons contain low to moderate purine ingredients. Egg and almonds are considered low in purines and are unlikely to significantly impact uric acid levels. However, if the macarons contain chocolate, especially dark chocolate, be mindful of the purine content. Dark chocolate is moderately purine-rich, so enjoy these macarons sparingly and consider the overall purine load of your diet. Always check the specific ingredients and portion sizes to make informed choices for managing your gout.\n",
+    "id": 63
+  },
+  {
+    "name": "miso soup",
+    "ingredients": [
+      "Green tea beverage",
+      "Tofu (Kinu)",
+      "Miso",
+      "Onions, raw",
+      "Seaweed, kombu, dried",
+      "Green tea leaves, dried",
+      "Seaweed, wakame, raw",
+      "Mushrooms (not further specified), raw"
+    ],
+    "description": "Miso soup can be a mixed bag for gout patients, depending on the ingredients. Miso itself is generally considered low in purines. However, other common ingredients like certain mushrooms and seaweed (kombu) can be moderate in purines. Tofu is a good source of protein and low in purines. Onions are also safe to eat. Since the purine content can vary, it's best to consume miso soup in moderation and be mindful of the specific ingredients used in your soup.\n",
+    "id": 64
+  },
+  {
+    "name": "mussels",
+    "ingredients": [
+      "Tuna, canned",
+      "Ayu, raw",
+      "Clams, raw",
+      "Anchovy, fresh",
+      "Salmon, canned",
+      "Oysters, canned",
+      "Barracuda, raw",
+      "Beltfish, raw",
+      "Sardine, canned"
+    ],
+    "description": "Mussels are considered a high-purine seafood, which can be a concern for gout patients. Purines break down into uric acid, and elevated uric acid levels can trigger gout flare-ups. Therefore, if you have gout, it's generally recommended to limit or avoid mussels in your diet. Opting for lower-purine seafood choices, like canned salmon, may be a better alternative. Remember to always consult with your doctor or a registered dietitian for personalized dietary advice regarding purine intake and managing your gout.\n",
+    "id": 65
+  },
+  {
+    "name": "nachos",
+    "ingredients": [
+      "Avocado, raw",
+      "Pepper, green",
+      "Onions, raw",
+      "Beans, pinto, dried, raw",
+      "Beef sirloin, raw",
+      "Corn cereal",
+      "Cheese, grated",
+      "Tomatoes, no further specified",
+      "Beef, ground, cooked",
+      "Cheese, processed"
+    ],
+    "description": "Nachos can be a mixed bag for gout patients due to their varied ingredients. Cheese, avocado, and tomatoes are generally low in purines and safe to consume in moderation. However, ingredients like beef (especially ground or sirloin), beans, and even some processed cheeses can contribute to higher purine intake. It's best to be mindful of the specific components in your nachos. Opt for versions with plenty of vegetables and limit high-purine additions like meat and beans to help manage your gout.\n",
+    "id": 66
+  },
+  {
+    "name": "omelette",
+    "ingredients": ["Egg, chicken, raw"],
+    "description": "Omelettes, primarily made from eggs, are generally considered a low-purine food and a safe option for individuals managing gout. Eggs themselves contain minimal purines, meaning they're unlikely to significantly raise uric acid levels in the body. While chicken may sometimes be added to an omelette, the purine content would depend on the amount of chicken used. For those strictly limiting purine intake, it's best to opt for plain omelettes or those with low-purine vegetable fillings, or carefully monitor the portion of chicken added.\n",
+    "id": 67
+  },
+  {
+    "name": "onion rings",
+    "ingredients": [
+      "Whole-grain wheat flour",
+      "Onions, raw",
+      "Bread, white",
+      "Egg, chicken, raw"
+    ],
+    "description": "Onion rings can be a mixed bag for gout patients. While onions themselves are low in purines, the added ingredients and frying process can increase concerns. The breading, especially if white bread is used, can contribute to higher carbohydrate intake, potentially impacting uric acid levels. Frying in oil adds unhealthy fats, which can also indirectly affect gout. Whole-grain wheat flour would be a better breading option. Consider the specific recipe and portion size. Opting for baked instead of fried onion rings, or limiting your consumption, is a more gout-friendly approach.\n",
+    "id": 68
+  },
+  {
+    "name": "oysters",
+    "ingredients": ["Oysters, raw", "Oysters, canned"],
+    "description": "Oysters, whether raw or canned, are considered a high-purine food. Purines break down into uric acid in the body, and elevated uric acid levels can trigger gout attacks. Therefore, individuals with gout should consume oysters sparingly or avoid them altogether. While occasional small servings might be tolerated by some, it's crucial to monitor your uric acid levels and be mindful of portion sizes. Consider discussing oyster consumption with your doctor or a registered dietitian to determine what's safe and appropriate for your individual condition.\n",
+    "id": 69
+  },
+  {
+    "name": "pad thai",
+    "ingredients": [
+      "Peanuts, raw",
+      "Egg, chicken, raw",
+      "Rice, white, raw",
+      "Tofu (Kinu)",
+      "Onions, raw",
+      "Shrimp, raw (unspecified)",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Sauce, fish",
+      "Garlic, raw"
+    ],
+    "description": "Pad Thai's impact on purine intake for gout patients varies greatly depending on the specific ingredients used. While rice, onions, garlic, eggs, and tofu are generally considered low in purines, other common ingredients can be problematic. Shrimp and fish sauce are high in purines and should be consumed sparingly or avoided. Soy sauce, while moderate, can contribute to overall purine load depending on the amount used. Peanuts are generally considered safe in moderation. Therefore, gout patients should carefully consider the ingredients and portion size when consuming Pad Thai, and ideally opt for versions with minimal high-purine ingredients.\n",
+    "id": 70
+  },
+  {
+    "name": "paella",
+    "ingredients": [
+      "Rice, white, raw",
+      "Tuna, canned",
+      "Onions, raw",
+      "Clams, raw",
+      "Shrimp, raw (unspecified)",
+      "Chicken breast, raw",
+      "Salmon, canned",
+      "Peas, green",
+      "Garlic, raw",
+      "Squid, raw (unspecified)"
+    ],
+    "description": "Paella's impact on purine intake varies significantly based on its ingredients. Rice, onions, garlic, and peas are generally low in purines and safe for gout patients. However, seafood like tuna, clams, shrimp, salmon, and squid are high in purines and should be consumed in moderation or avoided during gout flare-ups. Chicken also contains moderate purines. The overall purine content of paella depends on the proportion of high-purine seafood and meat used in the dish. Opting for paella with more rice and vegetables and smaller portions of seafood and meat can help reduce your purine intake.\n",
+    "id": 71
+  },
+  {
+    "name": "pancakes",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Bread flour",
+      "Honey",
+      "Whole-grain wheat flour",
+      "Pastry flour",
+      "Cake flour",
+      "Margarine",
+      "Yogurt (not further specified)",
+      "Milk"
+    ],
+    "description": "Pancakes themselves are generally considered to be moderate in purines, but the impact on your gout depends heavily on the ingredients. Flour, milk, and eggs are typically low in purines. However, be mindful of additions like butter or margarine, as excessive fats can indirectly affect uric acid levels. Also, consider the type of flour used; whole-grain wheat flour might contain slightly more purines than refined options like pastry or cake flour. Keeping portion sizes moderate and being aware of added fats is key to enjoying pancakes while managing gout.\n",
+    "id": 72
+  },
+  {
+    "name": "panna cotta",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Gelatin noodle (dried)",
+      "Honey",
+      "Yogurt, liquid",
+      "Cream, animal, fresh",
+      "Cream, vegetable, fresh",
+      "Cheese, grated",
+      "Yogurt (not further specified)",
+      "Milk"
+    ],
+    "description": "Panna cotta, a creamy dessert, generally poses a low risk for gout sufferers due to its typical ingredients. While milk and cream are present, they are considered to have a neutral or even slightly beneficial effect on gout. Other common ingredients like gelatin, honey, and eggs are also low in purines. However, be mindful of added ingredients like cheese, especially grated cheese, as some cheeses can be moderate in purines. Overall, panna cotta in moderation should be acceptable within a gout-friendly diet, but always check the specific recipe for high-purine additions.\n",
+    "id": 73
+  },
+  {
+    "name": "peking duck",
+    "ingredients": [
+      "Honey",
+      "Chicken leg, raw",
+      "Chicken breast, raw",
+      "Chicken, light meat, raw",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Chicken skin, raw",
+      "Chicken wing, raw",
+      "Chicken skin (from drumsticks and thighs), braised"
+    ],
+    "description": "Peking duck, primarily made from duck (similar to chicken), poses a moderate concern for gout patients due to its purine content. While duck meat itself contains moderate levels of purines, the skin, often consumed in large amounts with Peking duck, can be higher in purines. Additionally, some preparations may involve sauces or ingredients like soy sauce that could contribute to overall purine intake. Therefore, enjoying Peking duck in moderation and being mindful of portion sizes and accompanying sauces is advisable for managing gout.\n",
+    "id": 74
+  },
+  {
+    "name": "pho",
+    "ingredients": [
+      "Rice, white, raw",
+      "Onions, raw",
+      "Ginger root, raw",
+      "Beef brisket, raw",
+      "Coriander",
+      "Sauce, fish",
+      "Ramen, noodle",
+      "Beef neck, raw"
+    ],
+    "description": "Pho can be tricky for gout patients due to its varied ingredients. The broth, often made with beef brisket and neck, can be high in purines, potentially raising uric acid levels. Fish sauce also contributes to purine content. While rice noodles and herbs like coriander are generally low in purines, onions and ginger are moderate. If you enjoy pho, consider asking for a broth made with less meat or opting for a vegetarian version. Moderation is key, and be mindful of the quantity of high-purine ingredients.\n",
+    "id": 75
+  },
+  {
+    "name": "pizza",
+    "ingredients": [
+      "Bread (no further specified)",
+      "Onions, raw",
+      "Cheese, grated",
+      "Tomatoes, no further specified",
+      "Mushrooms (not further specified), raw"
+    ],
+    "description": "Pizza can be a mixed bag for gout patients. The bread and cheese are generally low in purines and safe to consume in moderation. However, other ingredients can influence its purine content. Onions and tomatoes are usually fine, but mushrooms are moderately high in purines and should be limited. Be mindful of the specific pizza toppings and avoid high-purine meats or excessive amounts of mushrooms. Opting for a vegetable-heavy pizza with minimal mushrooms and lean on the cheese and bread will be the safest bet.\n",
+    "id": 76
+  },
+  {
+    "name": "pork chop",
+    "ingredients": [
+      "Pork neck, raw",
+      "Pork roast and chops, cooked",
+      "Pork shoulder, raw",
+      "Pork tongue, raw",
+      "Pork liver, raw",
+      "Pork kidney, raw",
+      "Pork ribs, raw",
+      "Pork rump, raw",
+      "Pork sirloin, raw",
+      "Pork heart, raw"
+    ],
+    "description": "Pork chop, like other cuts of pork, is considered to have a moderate purine content. For gout patients, this means you don't necessarily need to eliminate it entirely from your diet, but moderation is key. Consuming large portions of pork chop regularly could potentially raise your uric acid levels and trigger gout flare-ups. It's best to limit your intake and balance your diet with plenty of low-purine foods like fruits, vegetables, and whole grains. Consider preparation methods as well, as boiling or grilling can help reduce purine content compared to frying.\n",
+    "id": 77
+  },
+  {
+    "name": "poutine",
+    "ingredients": ["Butter", "Potato, raw", "Cheese, grated"],
+    "description": "Poutine, while delicious, can be problematic for gout patients due to its purine content. Potatoes themselves are relatively low in purines, especially when raw. However, the butter and cheese used in poutine contribute to a higher overall purine load. Butter contains moderate amounts of purines, and cheese, particularly grated varieties, can also elevate purine levels. Therefore, frequent consumption of poutine may increase uric acid levels in the body and potentially trigger gout flare-ups. Moderation is key, and considering alternatives with lower-purine cheese options may be beneficial.\n",
+    "id": 78
+  },
+  {
+    "name": "prime rib",
+    "ingredients": ["Beef roast, cooked (unspecified)", "Beef rib loin, raw"],
+    "description": "Prime rib, made from beef rib loin, is considered a high-purine food and should be consumed sparingly or avoided by individuals managing gout. Both the cooked beef roast and the raw rib loin contain significant levels of purines, which break down into uric acid in the body. Elevated uric acid levels can trigger gout attacks. Limiting your intake of prime rib and other high-purine meats can help maintain healthy uric acid levels and reduce the risk of gout flares. Consider leaner protein sources and plant-based options as alternatives.\n",
+    "id": 79
+  },
+  {
+    "name": "pulled pork sandwich",
+    "ingredients": [
+      "Sauce, barbecue",
+      "Bread, white",
+      "Pork roast and chops, cooked"
+    ],
+    "description": "A pulled pork sandwich can be problematic for gout sufferers due to its high purine content. Pork, especially roast and chops, contains moderate to high levels of purines, which break down into uric acid and can trigger gout flares. Barbecue sauce may contain high fructose corn syrup, which can also elevate uric acid. While white bread is generally low in purines, the overall purine load from the pork makes this sandwich a less favorable choice. Opting for smaller portions or choosing lower-purine protein sources is advisable.\n",
+    "id": 80
+  },
+  {
+    "name": "ramen",
+    "ingredients": [
+      "Soup, ramen noodle, dry",
+      "Egg, chicken, raw",
+      "Pork neck, raw",
+      "Seaweed, nori, dried",
+      "Mirin (cooking wine)",
+      "Leek, Japanese (negi), raw",
+      "Fish product (narutomaki), processed",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Ramen, noodle",
+      "Mushrooms, shiitake, dried"
+    ],
+    "description": "Ramen's impact on purine intake varies greatly depending on the ingredients. The broth, often made with meat extracts or dried shiitake mushrooms, can be high in purines. Processed fish cakes (narutomaki) and soy sauce may contribute smaller amounts. While noodles themselves are generally low in purines, added ingredients like pork neck or certain seaweed varieties will significantly increase the overall purine content. Therefore, individuals with gout should carefully consider the specific components of their ramen and opt for versions with lower-purine ingredients like egg, leeks, and minimal meat broths.\n",
+    "id": 81
+  },
+  {
+    "name": "ravioli",
+    "ingredients": [
+      "Egg, chicken, raw",
+      "Cheese, cottage",
+      "Whole-grain wheat flour",
+      "Pastry flour",
+      "Salami",
+      "Cheese, grated",
+      "Pork, bacon, unprepared",
+      "Beef, ground, cooked",
+      "Spaghetti",
+      "Cheese, processed"
+    ],
+    "description": "Ravioli's purine content is highly variable depending on the filling. Ingredients like ground beef, bacon, salami, and chicken are high in purines and should be avoided or eaten sparingly by those with gout. Cheese, especially cottage and processed varieties, is generally low in purines and safe to consume. The pasta itself, whether made with whole-grain or pastry flour, is also low in purines. To manage your purine intake, choose ravioli with cheese or vegetable fillings and be mindful of portion sizes. Always check the ingredient list to avoid high-purine meats.\n",
+    "id": 82
+  },
+  {
+    "name": "red velvet cake",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Whole-grain wheat flour",
+      "Cake flour",
+      "Chocolate",
+      "Milk"
+    ],
+    "description": "Red velvet cake, with its typical ingredients, can pose a moderate concern for gout sufferers due to potential purine contributions. Eggs and milk contain moderate levels of purines, while chocolate, though often present in small amounts, also has purines. Butter and refined flours are generally low in purines. Therefore, consuming red velvet cake in moderation is advisable. Be mindful of portion sizes and consider it a treat rather than a regular dietary staple to manage overall purine intake and minimize the risk of gout flare-ups.\n",
+    "id": 83
+  },
+  {
+    "name": "risotto",
+    "ingredients": [
+      "Butter",
+      "Rice, white, raw",
+      "Onions, raw",
+      "Cheese, grated",
+      "Rice, white, cooked",
+      "Garlic, raw",
+      "Mushrooms (not further specified), raw"
+    ],
+    "description": "Risotto's impact on purine intake varies depending on the ingredients used. White rice is generally low in purines and safe for gout patients. However, other ingredients can raise the purine content. Butter, onions, garlic, and cheese have low to moderate purine levels and are usually fine in moderation. Be mindful of the mushrooms, as some varieties are higher in purines and should be limited. If you have gout, consider a risotto recipe that is mostly rice with low purine ingredients, and moderate your portion size to help manage your purine intake.\n",
+    "id": 84
+  },
+  {
+    "name": "samosa",
+    "ingredients": [
+      "Chickpeas (garbanzo beans), dried, raw",
+      "Whole-grain wheat flour",
+      "Lentils, dried, raw",
+      "Beans, pinto, dried, raw",
+      "Beans, small white, dried, raw",
+      "Peas, split, dried, raw",
+      "Beans, great northern, dried, raw",
+      "Beans, cranberry, dried, raw",
+      "Beans, adzuki, dried, raw"
+    ],
+    "description": "Samosas can be a concern for gout patients due to the presence of ingredients like chickpeas, lentils, and various beans. While these plant-based sources contain moderate amounts of purines, they generally don't elevate uric acid levels as drastically as animal products. However, portion control is key. If samosas are a regular part of your diet, be mindful of the quantity you consume and balance it with plenty of low-purine foods to help manage your uric acid levels and minimize gout flare-ups. It's always best to discuss your dietary choices with your doctor or a registered dietitian.\n",
+    "id": 85
+  },
+  {
+    "name": "sashimi",
+    "ingredients": [
+      "Ayu, raw",
+      "Anchovy, raw",
+      "Clams, raw",
+      "Eel, Japanese, raw",
+      "Crab, red king, raw",
+      "Cutlassfish (hairtail), fresh",
+      "Barracuda, raw",
+      "Beltfish, raw",
+      "Crab ovary, raw",
+      "Carp, raw"
+    ],
+    "description": "Sashimi, being raw fish, can be a concern for gout sufferers due to its purine content. While some raw fish are lower in purines, many commonly used in sashimi, such as anchovies, certain crabs, and some other fish listed, are considered moderate to high in purines. Consuming these can increase uric acid levels in the blood, potentially triggering gout flares. If you enjoy sashimi, it's best to choose varieties known to be lower in purines and to consume it in moderation, while also staying well-hydrated to help your body eliminate uric acid. Consulting with a doctor or registered dietitian for personalized recommendations is always advisable.\n",
+    "id": 86
+  },
+  {
+    "name": "scallops",
+    "ingredients": ["Scallops, raw"],
+    "description": "Scallops, while a delicious seafood, are considered a moderate-purine food. For gout patients, this means that consuming scallops can potentially raise your uric acid levels, which could trigger a gout flare-up. While you don't necessarily need to eliminate scallops entirely from your diet, it's wise to limit your portion sizes and frequency of consumption. Consider them an occasional treat rather than a dietary staple, and always stay well-hydrated to help your body flush out excess uric acid. Consulting with your doctor or a registered dietitian is recommended for personalized guidance on managing purine intake.\n",
+    "id": 87
+  },
+  {
+    "name": "seaweed salad",
+    "ingredients": [
+      "Seaweed, nori, dried",
+      "Seaweed, kombu, dried",
+      "Sesame",
+      "Seaweed, mozuku, dried",
+      "Seaweed, hijiki, dried",
+      "Seaweed, wakame, raw"
+    ],
+    "description": "Seaweed salad is generally considered a low-purine food option, making it a potentially suitable choice for individuals managing gout. Most seaweeds included in these salads, such as nori, wakame, and kombu, are low in purines. Sesame seeds, often added for flavor and texture, are also low in purines. While dried seaweeds might have a slightly higher purine concentration compared to their raw counterparts, the overall purine content remains relatively low. Therefore, enjoying seaweed salad in moderation is usually safe for those following a gout-friendly diet, but it's always a good idea to consult with a healthcare professional for personalized dietary advice.\n",
+    "id": 88
+  },
+  {
+    "name": "shrimp and grits",
+    "ingredients": ["Shrimp, raw, frozen (no further unspecified)"],
+    "description": "Shrimp, a key ingredient in shrimp and grits, is considered a moderate-purine food. For gout patients, this means you don't necessarily need to eliminate it entirely, but portion control is important. Excessive consumption of shrimp can potentially raise uric acid levels, triggering gout flares. Enjoy shrimp and grits sparingly, and be mindful of other purine-rich foods in your diet. Consider smaller portions of shrimp, and balance your meal with low-purine options like vegetables and complex carbohydrates. Remember to stay hydrated to help your body eliminate uric acid.\n",
+    "id": 89
+  },
+  {
+    "name": "spaghetti bolognese",
+    "ingredients": [
+      "Beef, ground, cooked",
+      "Onions, raw",
+      "Garlic, raw",
+      "Tomatoes, no further specified",
+      "Spaghetti"
+    ],
+    "description": "Spaghetti Bolognese, due to its ingredients, can be a moderate concern for gout sufferers. Ground beef is high in purines, which break down into uric acid and can trigger gout flares. While onions, garlic, tomatoes, and spaghetti are generally considered low in purines, the significant amount of beef in the Bolognese sauce is the primary factor to consider. Portion control is key; smaller servings of spaghetti Bolognese, especially with lean ground beef and plenty of vegetables, can help manage purine intake. Consider alternatives like using ground turkey or chicken instead of beef to lower the purine content.\n",
+    "id": 90
+  },
+  {
+    "name": "spaghetti carbonara",
+    "ingredients": [
+      "Butter",
+      "Egg, chicken, raw",
+      "Pork neck, raw",
+      "Pork shoulder, raw",
+      "Cream, animal, fresh",
+      "Cheese, grated",
+      "Pork ribs, raw",
+      "Pork sirloin, raw",
+      "Spaghetti",
+      "Pork tenderloin, raw"
+    ],
+    "description": "Spaghetti carbonara is generally not a good choice for gout patients due to its potential for high purine content. Several ingredients, like pork (neck, shoulder, ribs, sirloin, tenderloin), contain moderate to high levels of purines, which break down into uric acid. High uric acid levels can trigger gout flare-ups. While ingredients like eggs, cheese, and spaghetti are lower in purines, the overall dish is likely to contribute significantly to your daily purine intake, especially with the addition of cream and butter. It's best to limit or avoid carbonara if you're managing gout.\n",
+    "id": 91
+  },
+  {
+    "name": "spring rolls",
+    "ingredients": [
+      "Carrots, raw",
+      "Rice, white, raw",
+      "Seaweed, nori, dried",
+      "Onions, raw",
+      "Shrimp, raw (unspecified)",
+      "Soy sauce made from soy and wheat (shoyu)",
+      "Sesame",
+      "Lettuce",
+      "Mushrooms (not further specified), raw",
+      "Cucumber, raw"
+    ],
+    "description": "Spring rolls can be a mixed bag for gout patients depending on the filling. Most of the vegetables like carrots, cucumbers, lettuce, and onions are low in purines and safe to eat. However, shrimp and mushrooms have moderate purine levels, so limit your intake or ask about the quantity used. Soy sauce also contains purines, so use it sparingly. Rice, seaweed, and sesame are generally fine in moderation. It's best to inquire about the specific ingredients and their amounts to make informed decisions.\n",
+    "id": 92
+  },
+  {
+    "name": "steak",
+    "ingredients": [
+      "Beef stomach, raw",
+      "Beef large intestine, raw",
+      "Beef kidney, cooked",
+      "Beef sirloin, raw",
+      "Beef heart, raw",
+      "Beef brain, raw",
+      "Beef kidney, raw",
+      "Beef liver, raw",
+      "Beef roast, cooked (unspecified)",
+      "Beef, ground, cooked"
+    ],
+    "description": "Steak, unfortunately, is generally high in purines. Purines break down into uric acid, which can trigger gout flares by forming crystals in your joints. While the specific purine content varies depending on the cut and cooking method, it's best to limit steak consumption if you have gout. Consider smaller portion sizes and less frequent servings. Opting for leaner cuts and cooking methods that drain fat may slightly reduce purine levels, but steak should still be approached with caution as part of a gout-friendly diet.\n",
+    "id": 93
+  },
+  {
+    "name": "strawberry shortcake",
+    "ingredients": [
+      "Butter",
+      "Bread, white",
+      "Strawberries, raw",
+      "Cream, animal, fresh",
+      "Cake flour",
+      "Milk"
+    ],
+    "description": "Strawberry shortcake, while a delicious treat, can be a mixed bag for gout patients due to its potential purine content. Ingredients like butter, cream, and milk contain relatively low purine levels and are generally acceptable in moderation. However, white bread and cake flour contribute carbohydrates that can indirectly raise uric acid levels. Strawberries are a low-purine fruit and a good choice. Therefore, enjoy strawberry shortcake sparingly as part of a balanced diet, paying attention to portion sizes and overall carbohydrate intake.\n",
+    "id": 94
+  },
+  {
+    "name": "sushi",
+    "ingredients": [
+      "Wasabi",
+      "Tuna, raw (unspecified)",
+      "Rice, white, raw",
+      "Seaweed, nori, dried",
+      "Tuna, canned",
+      "Avocado, raw",
+      "Shrimp, raw (unspecified)",
+      "Rice, white, cooked",
+      "Squid, raw (unspecified)",
+      "Salmon, mixed species, raw"
+    ],
+    "description": "Sushi's impact on purine intake varies greatly depending on its ingredients. While white rice and nori seaweed are generally low in purines, certain fillings can be problematic for gout. Raw tuna, canned tuna, shrimp, squid, and salmon all contain moderate to high levels of purines, which can elevate uric acid levels and potentially trigger gout flares. Avocado and wasabi are low-purine options. Therefore, individuals with gout should carefully consider the type of sushi they consume, opting for varieties with low-purine ingredients and limiting portions of those containing high-purine seafood.\n",
+    "id": 95
+  },
+  {
+    "name": "tacos",
+    "ingredients": [
+      "Chicken thigh, roasted",
+      "Avocado, raw",
+      "Onions, raw",
+      "Sauce, barbecue",
+      "Cheese, grated",
+      "Chicken breast, roasted",
+      "Lettuce",
+      "Cayenne pepper powder",
+      "Tomatoes, no further specified",
+      "Beef, ground, cooked"
+    ],
+    "description": "Tacos can be a mixed bag for gout patients due to their varied ingredients. Generally, ground beef and chicken, especially dark meat like chicken thighs, are higher in purines and should be limited. Chicken breast is a better option. Avocado, lettuce, tomatoes, and cayenne pepper are generally low in purines and safe to consume. Cheese and barbecue sauce can be moderate; consume in moderation. Onions are considered safe. Careful selection of fillings is key to keeping purine intake low.\n",
+    "id": 96
+  },
+  {
+    "name": "takoyaki",
+    "ingredients": [
+      "Mackerel, raw (unspecified)",
+      "Egg, chicken, raw",
+      "Bread flour",
+      "Tuna, canned",
+      "Seaweed, nori, dried",
+      "Shrimp, raw (unspecified)",
+      "Ginger root, raw",
+      "Bonito, dried",
+      "Squid, raw (unspecified)",
+      "Octopus, raw"
+    ],
+    "description": "Takoyaki presents a potential concern for gout patients due to several high-purine ingredients commonly used in its preparation. Mackerel, tuna, bonito, shrimp, squid, and octopus are all known to be high in purines, which break down into uric acid and can trigger gout flares. While eggs, flour, seaweed, and ginger are generally low in purines, the overall purine content of takoyaki can be significant depending on the specific recipe and amount of high-purine seafood used. Therefore, individuals with gout should consume takoyaki sparingly or inquire about the ingredients to make informed choices.\n",
+    "id": 97
+  },
+  {
+    "name": "tiramisu",
+    "ingredients": [
+      "Egg, chicken, raw",
+      "Bread, white",
+      "Cream, animal, fresh",
+      "Chocolate",
+      "Milk",
+      "Cheese, processed"
+    ],
+    "description": "Tiramisu, with its layered composition, presents a mixed bag for gout patients. Ingredients like eggs, bread, and milk are generally lower in purines and can be consumed in moderation. However, cream and cheese, particularly processed varieties, contain moderate purine levels, so portion control is key. Chocolate also contains purines, albeit in smaller amounts. Therefore, while an occasional indulgence might be acceptable, frequent or large servings of tiramisu could contribute to elevated uric acid levels and potentially trigger gout flare-ups. Consider your overall diet and uric acid levels when deciding to enjoy this dessert.\n",
+    "id": 98
+  },
+  {
+    "name": "tuna tartare",
+    "ingredients": [
+      "Tuna (Bonito), raw",
+      "Tuna, raw (unspecified)",
+      "Tuna, canned"
+    ],
+    "description": "Tuna, in any form, including tuna tartare, is generally considered a high-purine food. Purines break down into uric acid in the body, which can trigger gout flare-ups. While occasional small servings might be tolerated by some, individuals with gout should generally limit or avoid tuna and tuna tartare, particularly when experiencing a flare. Canned tuna can vary in purine content depending on the packing method, but is still typically considered high in purines. Always consult with your doctor or a registered dietitian to determine the appropriate amount of tuna for your specific dietary needs and gout management plan.\n",
+    "id": 99
+  },
+  {
+    "name": "waffles",
+    "ingredients": [
+      "Whole-grain wheat flour",
+      "Egg, chicken, raw",
+      "Butter",
+      "Milk"
+    ],
+    "description": "Waffles, depending on the ingredients, can contribute moderately to your purine intake. The egg and milk used in the batter contain moderate levels of purines, which could potentially elevate uric acid levels. Whole-grain wheat flour and butter are generally low in purines and less of a concern. Consider limiting your portion size and opting for waffles made with reduced amounts of milk and eggs, or exploring recipes that use purine-friendly alternatives. Always check the specific recipe or ingredients list for a more accurate assessment of the purine content in your waffles.\n",
+    "id": 100
+  }
+]

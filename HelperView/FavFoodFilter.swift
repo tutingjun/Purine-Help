@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FavoriteIngredientFilter: View {
     @EnvironmentObject var user: UserStore
+    @EnvironmentObject var food: FoodPurineStore
     
     var body: some View {
         NavigationStack{
@@ -27,14 +28,21 @@ struct FavoriteIngredientFilter: View {
             .searchable(
                 text: $user.searchText,
                 placement: .navigationBarDrawer(displayMode: .always))
+            .onAppear{
+                user.searchText = ""
+                user.selectedCategory = ""
+                user.selectedTag = ""
+            }
         }
     }
     
     @ViewBuilder
     private func IngredientRow(_ ingredient: IngredientDetail) -> some View {
         NavigationLink {
-            IngredientDetailedView(ingredient: ingredient, isFavorite: user.isIngredientFav(ingredient))
+            IngredientDetailedView(ingredient: ingredient,
+                                   isFavorite: user.isIngredientFav(ingredient))
                 .environmentObject(user)
+                .environmentObject(food)
         } label: {
             HStack(alignment:.center, spacing: 10) {
                 Text(
@@ -138,4 +146,5 @@ struct FavoriteIngredientFilter: View {
 #Preview {
     FavoriteIngredientFilter()
         .environmentObject(UserStore())
+        .environmentObject(FoodPurineStore())
 }

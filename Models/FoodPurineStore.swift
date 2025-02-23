@@ -14,12 +14,14 @@ struct IngredientDetail: Codable, Hashable, Identifiable {
     var name: String
     var purine_count: String
     var tag: String
+    var description: String
 }
 
 struct DishDetail: Codable, Hashable, Identifiable {
-    var id: UUID
+    var id: Int
     var name: String
     var ingredients: [IngredientDetail]
+    var description: String
 }
 
 enum FoodItem: Identifiable, Codable, Hashable {
@@ -27,12 +29,7 @@ enum FoodItem: Identifiable, Codable, Hashable {
     case ingredient(IngredientDetail)
 
     var id: UUID {
-        switch self {
-        case .dish(let dish):
-            return dish.id
-        case .ingredient:
-            return UUID()
-        }
+        return UUID()
     }
 }
 
@@ -48,26 +45,32 @@ class FoodPurineStore: ObservableObject {
     @Published var selectedType: String = ""
 
     @Published var topLowPurineByCategory: [String: [IngredientDetail]] = [:]
+    @Published var ingredientToDishes: [Int: [DishDetail]] = [:]
 
     // MARK: -Load Data
     private var ingredientDefaultKey: String = "FoodStore_Ingredient"
-
     private var dishDefaultKey: String = "FoodStore_Dish"
-
     private var topPurineDefaultKey: String = "FoodStore_TopPurine"
+    private let ingredientToDishesKey = "FoodStore_IngredientToDishes"
+
 
     init() {
         Task {
             self.isLoading = true
             let didRestorePurine = await restoreTopPurineFromUserDefaults()
             let didRestoreData = await restoreFromUserDefaults()
-            print("Restored \(didRestoreData), \(didRestorePurine)")
+            let didRestoreIngredientToDish = await restoreIngredientToDishesFromUserDefaults()
+
             if !didRestoreData {
                 await loadData()
             }
 
             if !didRestorePurine {
                 computeLowPurineIngredients()
+            }
+            
+            if !didRestoreIngredientToDish {
+                computeIngredientToDishes()
             }
 
             await combineFoods()
@@ -129,6 +132,30 @@ class FoodPurineStore: ObservableObject {
 
         storeTopPurineToUserDefaults()
     }
+    
+    private func computeIngredientToDishes() {
+        for dish in dishes {
+            for ingredient in dish.ingredients {
+                ingredientToDishes[ingredient.id, default: []].append(dish)
+            }
+        }
+        storeIngredientToDishesToUserDefaults()
+    }
+    
+    private func storeIngredientToDishesToUserDefaults() {
+        if let encoded = try? JSONEncoder().encode(ingredientToDishes) {
+            UserDefaults.standard.set(encoded, forKey: ingredientToDishesKey)
+        }
+    }
+
+    private func restoreIngredientToDishesFromUserDefaults() async -> Bool {
+        if let jsonData = UserDefaults.standard.data(forKey: ingredientToDishesKey),
+           let decoded = try? JSONDecoder().decode([Int: [DishDetail]].self, from: jsonData) {
+            self.ingredientToDishes = decoded
+            return true
+        }
+        return false
+    }
 
     private func storeTopPurineToUserDefaults() {
         if let encoded = try? JSONEncoder().encode(topLowPurineByCategory) {
@@ -151,7 +178,7 @@ class FoodPurineStore: ObservableObject {
     private func loadIngredientsFromFile() async {
         guard
             let url = Bundle.main.url(
-                forResource: "purine_data", withExtension: "json"),
+                forResource: "ingredient", withExtension: "json"),
             let data = try? Data(contentsOf: url),
             let parsedIngredients = try? JSONDecoder().decode(
                 [IngredientDetail].self, from: data)
@@ -167,25 +194,19 @@ class FoodPurineStore: ObservableObject {
 
     private func loadDishesFromFile() async {
         guard
-            let url = Bundle.main.url(
-                forResource: "ingredients", withExtension: "json"),
+            let url = Bundle.main.url(forResource: "dish", withExtension: "json"),
             let data = try? Data(contentsOf: url),
-            let rawDishes = try? JSONDecoder().decode(
-                [String: [String]].self, from: data)
+            let rawDishes = try? JSONDecoder().decode([DishRaw].self, from: data)
         else {
             print("Failed to load dishes")
             return
         }
 
         // Create a lookup dictionary for fast ingredient matching
-        let ingredientDict = Dictionary(
-            uniqueKeysWithValues: ingredients.map { ($0.name, $0) })
+        let ingredientDict = Dictionary(uniqueKeysWithValues: ingredients.map { ($0.name, $0) })
 
-        let parsedDishes = rawDishes.map { (dishName, ingredientIds) in
-            // Find the ingredients by their IDs
-            var dishIngredients = ingredientIds.compactMap {
-                ingredientDict[$0]
-            }
+        let parsedDishes = rawDishes.map { dish in
+            var dishIngredients = dish.ingredients.compactMap { ingredientDict[$0] }
             dishIngredients.sort {
                 if let purineA = Double($0.purine_count),
                     let purineB = Double($1.purine_count)
@@ -195,11 +216,22 @@ class FoodPurineStore: ObservableObject {
                 return false
             }
             return DishDetail(
-                id: UUID(), name: dishName, ingredients: dishIngredients)
+                id: dish.id,
+                name: dish.name,
+                ingredients: dishIngredients,
+                description: dish.description
+            )
         }
 
         self.dishes = parsedDishes
         storeDataToUserDefaults(data: parsedDishes, key: dishDefaultKey)
+    }
+    
+    private struct DishRaw: Codable {
+        let id: Int
+        let name: String
+        let ingredients: [String]
+        let description: String
     }
 
     private func storeDataToUserDefaults<T: Codable>(data: T, key: String) {

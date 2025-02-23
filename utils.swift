@@ -164,6 +164,10 @@ class Helper{
         }
     }
     
+    static func formatPredictionLabel(_ label: String) -> String {
+        return label.replacingOccurrences(of: "_", with: " ")
+    }
+    
     // MARK: - utils
     static func formatStringToNearestThousandth(_ numberString: String) -> String {
         if numberString == "ND" {

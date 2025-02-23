@@ -1,9 +1,9 @@
-////
-////  LiveView.swift
-////  Purine Help
-////
-////  Created by 涂庭鋆 on 2025/2/18.
-////
+//
+//  LiveView.swift
+//  Purine Help
+//
+//  Created by 涂庭鋆 on 2025/2/18.
+//
 
 import SwiftUI
 
@@ -12,21 +12,24 @@ struct LiveView: View {
     @EnvironmentObject private var camera: DetectionModel
     @EnvironmentObject private var food: FoodPurineStore
     @EnvironmentObject private var user: UserStore
-    
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             ZStack {
                 // Camera Feed
-                if camera.isCameraReady{
+                if camera.isCameraReady {
                     CameraViewRepresentable(viewModel: camera)
                         .edgesIgnoringSafeArea(.top)
                     VStack {
-                        HStack{
+                        HStack {
                             Spacer()
-                            HStack{
+                            HStack {
                                 Text("Start Prediction: ")
-                                Toggle("Start Prediction: ", isOn: $camera.isDetecting)
-                                    .labelsHidden()
+                                Toggle(
+                                    "Start Prediction: ",
+                                    isOn: $camera.isDetecting
+                                )
+                                .labelsHidden()
                             }
                             .padding(10)
                             .background(Color.white.opacity(0.8))
@@ -35,20 +38,34 @@ struct LiveView: View {
                             .shadow(radius: 5)
                         }
                         .padding()
-                        
+
                         Spacer()
-                        
-                        if !camera.predictedClassLabel.isEmpty && camera.isDetecting {
-                            if let dish = food.getDishByName(camera.predictedClassLabel) {
+
+                        if !camera.predictedClassLabel.isEmpty
+                            && camera.isDetecting
+                        {
+                            if let dish = food.getDishByName(
+                                camera.predictedClassLabel)
+                            {
                                 NavigationLink {
-                                    DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
-                                        .environmentObject(user)
+                                    DishDetailedView(
+                                        dish: dish,
+                                        isFavorite: user.isDishFav(dish)
+                                    )
+                                    .environmentObject(user)
+                                    .environmentObject(food)
                                 } label: {
-                                    HStack(spacing: 20){
+                                    HStack(spacing: 20) {
                                         Text("🍽️  " + dish.name.capitalized)
-                                            .font(.system(size: 32, weight: .semibold))
+                                            .font(
+                                                .system(
+                                                    size: 32, weight: .semibold)
+                                            )
                                         Image(systemName: "chevron.right")
-                                            .font(.system(size: 16, weight: .semibold))
+                                            .font(
+                                                .system(
+                                                    size: 16, weight: .semibold)
+                                            )
                                     }
                                     .padding()
                                     .background(Color.white.opacity(0.8))
@@ -61,11 +78,11 @@ struct LiveView: View {
                             }
                         }
                     }
-                    
+
                 } else {
                     Text("Camera not available")
                 }
-                
+
             }
             .task {
                 await camera.start()
@@ -86,5 +103,5 @@ struct LiveView: View {
     } else {
         // Fallback on earlier versions
     }
-    
+
 }

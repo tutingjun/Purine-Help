@@ -11,6 +11,8 @@ struct IngredientDetailedView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @EnvironmentObject var user: UserStore
+    @EnvironmentObject var food: FoodPurineStore
+
     var ingredient: IngredientDetail
     @State var isFavorite: Bool
     @State var shouldPresentSheet = false
@@ -20,13 +22,13 @@ struct IngredientDetailedView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 35) {
-                    
+
                     VStack(alignment: .leading, spacing: 10) {
-                        HStack(alignment:.firstTextBaseline){
+                        HStack(alignment: .firstTextBaseline) {
                             Text(ingredient.name)
                                 .font(.system(size: 36, weight: .heavy))
                             Spacer()
-                            Button{
+                            Button {
                                 if isFavorite {
                                     user.removeFavIngredient(ingredient)
                                 } else {
@@ -34,27 +36,32 @@ struct IngredientDetailedView: View {
                                 }
                                 isFavorite.toggle()
                             } label: {
-                                Image(systemName: isFavorite ? "star.fill" : "star")
-                                    .foregroundColor(isFavorite ? .orange : colorScheme == .light ? .black : .white)
-                                    .font(.system(size: 18))
+                                Image(
+                                    systemName: isFavorite
+                                        ? "star.fill" : "star"
+                                )
+                                .foregroundColor(
+                                    isFavorite
+                                        ? .orange
+                                        : colorScheme == .light
+                                            ? .black : .white
+                                )
+                                .font(.system(size: 18))
                             }
                         }
-                        
-                        NavigationLink{
-//                            TopIngredientList(categoryList: [IngredientDetail], category: <#T##String#>)
-                        } label: {
-                            Text(
-                                Helper.transformCate(ingredient.category).capitalized
-                            )
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 15)
-                            .padding(.vertical, 10)
-                            .background(
-                                Helper.cateToColorMap[ingredient.category]!
-                            )
-                            .clipShape(Capsule())
-                        }
+
+                        Text(
+                            Helper.transformCate(ingredient.category)
+                                .capitalized
+                        )
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 10)
+                        .background(
+                            Helper.cateToColorMap[ingredient.category]!
+                        )
+                        .clipShape(Capsule())
                     }
 
                     VStack(alignment: .leading) {
@@ -70,7 +77,7 @@ struct IngredientDetailedView: View {
                             }
                         }
 
-                        HStack{
+                        HStack {
                             Helper.tagImage(tag: ingredient.tag)
                             Text(
                                 Helper.formatStringToNearestThousandth(
@@ -78,7 +85,6 @@ struct IngredientDetailedView: View {
                             )
                             .font(.headline)
                         }
-                        
 
                         if ingredient.purine_count != "ND" {
                             SliderView(
@@ -94,11 +100,22 @@ struct IngredientDetailedView: View {
                         Text("Safety Advice")
                             .font(.callout)
                             .foregroundStyle(.gray)
-                        Text(
-                            "Fresh parsley, despite being a vegetable, exhibits a surprisingly high purine content of 289.3 mg per 100g. This level is significant, approaching that of some moderate-purine meats. While parsley is often used in small quantities as a garnish, individuals adhering to a strict low-purine diet, particularly those with gout, should be mindful of their intake. Consider using lower-purine herbs and vegetables for flavor enhancement. As always, consult with a healthcare professional or registered dietitian for personalized dietary advice regarding purine management."
-                        )
-                        .lineSpacing(8)
-
+                        Text(ingredient.description)
+                            .lineSpacing(8)
+                    }
+                    
+                    if let dishList = food.ingredientToDishes[ingredient.id]{
+                        if !dishList.isEmpty{
+                            VStack(alignment: .leading, spacing: 3){
+                                Text("Dishes containing \(ingredient.name)")
+                                    .font(.callout)
+                                    .foregroundStyle(.gray)
+                                ForEach(dishList, id: \.self){ dish in
+                                    DishRow(dish)
+                                        .buttonStyle(PlainButtonStyle())
+                                }
+                            }
+                        }
                     }
 
                 }
@@ -107,17 +124,40 @@ struct IngredientDetailedView: View {
             .edgesIgnoringSafeArea(.horizontal)
             .padding()
             .sheet(isPresented: $shouldPresentSheet) {
-                print("Sheet dismissed!")
             } content: {
                 IngredientSheet(isPresented: $shouldPresentSheet)
 
             }
 
         }
-        .onDisappear{
+        .onDisappear {
             if fromSearch {
                 user.addRecentSearch(FoodItem.ingredient(ingredient))
             }
+        }
+    }
+    
+    @ViewBuilder
+    private func DishRow(_ dish: DishDetail) -> some View {
+        NavigationLink {
+            DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
+                .environmentObject(user)
+                .environmentObject(food)
+        } label: {
+            VStack(spacing: 5){
+                HStack{
+                    Text("🍽️  " + dish.name.capitalized)
+                        .fontWeight(.semibold)
+                        .font(.headline)
+                        .padding(.vertical, 6)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(.secondary)
+                }
+                Divider()
+            }
+            .contentShape(Rectangle())
+            .padding(.vertical, 3)
         }
     }
 }
@@ -126,6 +166,10 @@ struct IngredientDetailedView: View {
     IngredientDetailedView(
         ingredient: IngredientDetail(
             id: 1, category: "Vegetarian meat, fish, and egg alternatives",
-            name: "Rice, whitsdadsadadsadadasdase, raw", purine_count: "5.9", tag: "low"), isFavorite: false)
+            name: "Rice, whitsdadsadadsadadasdase, raw", purine_count: "5.9",
+            tag: "low", description: "Beef kidne."),
+        isFavorite: false
+    )
     .environmentObject(UserStore())
+    .environmentObject(FoodPurineStore())
 }

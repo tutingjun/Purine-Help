@@ -1,11 +1,12 @@
 //
 //  DetectionModel.swift
-//  VisionKitDemo
+//  Purine Help
 //
-//  Created by Itsuki on 2024/07/27.
+//  Created by 涂庭鋆 on 2025/2/21.
 //
+
 import SwiftUI
-import Vision
+import CoreML
 
 @available(iOS 18.0, *)
 class DetectionModel: CameraManager {

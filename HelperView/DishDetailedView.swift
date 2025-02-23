@@ -11,12 +11,12 @@ struct DishDetailedView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @EnvironmentObject var user: UserStore
+    @EnvironmentObject var food: FoodPurineStore
     var dish: DishDetail
     @State var isFavorite: Bool
     var fromSearch = true
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack(alignment: .firstTextBaseline) {
@@ -41,9 +41,7 @@ struct DishDetailedView: View {
                         Text("Description")
                             .font(.callout)
                             .foregroundStyle(.gray)
-                        Text(
-                            "Chicken wings are a popular appetizer or snack consisting of chicken wing sections, typically deep-fried or baked. They are often coated in sauces ranging from mild to extremely spicy, and served with dips like ranch or blue cheese dressing. A common pub food!"
-                        )
+                        Text(dish.description)
                         .lineSpacing(4)
                     }
 
@@ -61,6 +59,7 @@ struct DishDetailedView: View {
                                             ingredient)
                                     )
                                     .environmentObject(user)
+                                    .environmentObject(food)
                                 } label: {
                                     makeIngredientRow(ingredient)
                                 }
@@ -75,11 +74,10 @@ struct DishDetailedView: View {
             }
             .edgesIgnoringSafeArea(.horizontal)
             .padding()
-        }
-        .onDisappear {
-            if fromSearch {
-                user.addRecentSearch(FoodItem.dish(dish))
-            }
+            .onDisappear {
+                if fromSearch {
+                    user.addRecentSearch(FoodItem.dish(dish))
+                }
         }
     }
 
@@ -126,15 +124,17 @@ struct DishDetailedView: View {
 
 #Preview {
     var test = DishDetail(
-        id: UUID(), name: "Spaghetti Bolognese",
+        id: 2, name: "Spaghetti Bolognese",
         ingredients: [
             IngredientDetail(
                 id: 1, category: "Pasta", name: "Spaghetti",
-                purine_count: "12", tag: "medium"),
+                purine_count: "12", tag: "medium", description: "12"),
             IngredientDetail(
                 id: 2, category: "Meat", name: "Ground Beef",
-                purine_count: "234", tag: "high"),
-        ])
+                purine_count: "234", tag: "high", description: "12"),
+        ],
+        description: "123")
     DishDetailedView(dish: test, isFavorite: false)
         .environmentObject(UserStore())
+        .environmentObject(FoodPurineStore())
 }

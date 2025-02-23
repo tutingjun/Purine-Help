@@ -1,10 +1,10 @@
-////
-////  CameraView.swift
-////  Purine Help
-////
-////  Created by 涂庭鋆 on 2025/2/18.
-////
 //
+//  CameraView.swift
+//  Purine Help
+//
+//  Created by 涂庭鋆 on 2025/2/18.
+//
+
 import SwiftUI
 import AVFoundation
 

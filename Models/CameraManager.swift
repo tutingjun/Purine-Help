@@ -1,8 +1,8 @@
 //
 //  CameraManager.swift
-//  VisionKitDemo
+//  Purine Help
 //
-//  Created by Itsuki on 2024/07/26.
+//  Created by 涂庭鋆 on 2025/2/21.
 //
 
 @preconcurrency import AVFoundation
@@ -20,8 +20,6 @@ class CameraManager: NSObject, ObservableObject{
     private var videoOutput: AVCaptureVideoDataOutput?
     private var sessionQueue: DispatchQueue!
 
-    // for preview device output
-    var isPreviewPaused = false
     @Published var isCameraReady = false
     private var addToPreviewStream: ((CVPixelBuffer) -> Void)?
 
@@ -35,7 +33,6 @@ class CameraManager: NSObject, ObservableObject{
 
     override init() {
         super.init()
-        // The value of this property is an AVCaptureSessionPreset indicating the current session preset in use by the receiver. The sessionPreset property may be set while the receiver is running.
         captureSession.sessionPreset = .high
         sessionQueue = DispatchQueue(label: "session queue")
     }
@@ -189,13 +186,6 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
 
     }
 
-    func captureOutput(
-        _ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer,
-        from connection: AVCaptureConnection
-    ) {
-        //        print("frame dropped")
-    }
-
     func resizePixelBuffer(
         _ pixelBuffer: CVPixelBuffer, width: Int, height: Int
     ) -> CVPixelBuffer? {
@@ -263,20 +253,4 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
         return nil
     }
 
-}
-
-private enum RotationAngle: CGFloat {
-    case portrait = 90
-    case portraitUpsideDown = 270
-    case landscapeRight = 180
-    case landscapeLeft = 0
-}
-
-extension CIImage {
-    var image: Image? {
-        let ciContext = CIContext()
-        guard let cgImage = ciContext.createCGImage(self, from: self.extent)
-        else { return nil }
-        return Image(decorative: cgImage, scale: 1, orientation: .up)
-    }
 }

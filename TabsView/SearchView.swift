@@ -24,18 +24,22 @@ struct SearchView: View {
                         Divider()
                         WrappingHStack(user.recentSearches, id: \.self){item in
                             switch item {
-                            case .ingredient(let food):
+                            case .ingredient(let ingredient):
                                 NavigationLink{
-                                    IngredientDetailedView(ingredient: food, isFavorite: user.isIngredientFav(food))
+                                    IngredientDetailedView(
+                                        ingredient: ingredient,
+                                        isFavorite: user.isIngredientFav(ingredient))
                                         .environmentObject(user)
+                                        .environmentObject(store)
                                 } label: {
-                                    RecentSearchCapsule(name: food.name.capitalized)
+                                    RecentSearchCapsule(name: ingredient.name.capitalized)
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             case .dish(let dish):
                                 NavigationLink{
                                     DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
                                         .environmentObject(user)
+                                        .environmentObject(store)
                                 } label: {
                                     RecentSearchCapsule(name: dish.name.capitalized)
                                 }
@@ -104,8 +108,11 @@ struct SearchView: View {
     @ViewBuilder
     private func IngredientRow(_ ingredient: IngredientDetail) -> some View {
         NavigationLink {
-            IngredientDetailedView(ingredient: ingredient, isFavorite: user.isIngredientFav(ingredient))
+            IngredientDetailedView(
+                ingredient: ingredient,
+                isFavorite: user.isIngredientFav(ingredient))
                 .environmentObject(user)
+                .environmentObject(store)
         } label: {
             VStack(alignment: .leading, spacing: 3) {
                 Text(
@@ -134,6 +141,7 @@ struct SearchView: View {
         NavigationLink {
             DishDetailedView(dish: dish, isFavorite: user.isDishFav(dish))
                 .environmentObject(user)
+                .environmentObject(store)
         } label: {
             Text("🍽️ " + dish.name.capitalized)
                 .fontWeight(.semibold)

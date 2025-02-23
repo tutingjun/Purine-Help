@@ -36,7 +36,6 @@ struct TopView: View {
                                     )
                                     .font(.system(size: 24))
                                     Text(Helper.transformCate(category).capitalized)
-                                        .font(.system(size: 18))
                                         .lineSpacing(5)
                                     Spacer()
                                 }

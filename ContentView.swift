@@ -37,6 +37,7 @@ struct ContentView: View {
                 
                 UserView()
                     .environmentObject(userStore)
+                    .environmentObject(foodStore)
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
@@ -65,7 +66,7 @@ struct LoadingView: View {
                 .foregroundColor(.gray)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white.opacity(0.8))  // Light overlay effect
+        .background(Color.white.opacity(0.8))
     }
 }
 

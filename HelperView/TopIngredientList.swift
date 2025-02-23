@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopIngredientList: View {
     @EnvironmentObject var user: UserStore
+    @EnvironmentObject var food: FoodPurineStore
 
     var categoryList: [IngredientDetail]
     var category: String
@@ -45,6 +46,7 @@ struct TopIngredientList: View {
                                 isFavorite: user.isIngredientFav(ingredient)
                             )
                             .environmentObject(user)
+                            .environmentObject(food)
                         } label: {
                             IngredientRow(ingredient, at: index)
                                 .padding(.horizontal)
@@ -96,12 +98,13 @@ struct TopIngredientList: View {
         categoryList: [
             IngredientDetail(
                 id: 1, category: "Pasta", name: "Spaghetti",
-                purine_count: "12", tag: "medium"),
+                purine_count: "12", tag: "medium", description: "12"),
             IngredientDetail(
                 id: 2, category: "Meat", name: "Ground Beef",
-                purine_count: "234", tag: "high"),
+                purine_count: "234", tag: "high", description: "12"),
         ],
         category: "Legumes and legume products"
     )
     .environmentObject(UserStore())
+    .environmentObject(FoodPurineStore())
 }
