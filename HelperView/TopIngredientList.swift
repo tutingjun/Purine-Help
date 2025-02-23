@@ -15,47 +15,44 @@ struct TopIngredientList: View {
     var category: String
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        ScrollView {
+            VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
-                        Text(Helper.transformCate(category).capitalized)
-                            .font(.system(size: 36, weight: .heavy))
-                            .padding(.bottom, 5)
-                    }
-                    .padding(.horizontal)
-
-                    Text(Helper.ingredientCatDescription(category: category))
-                        .lineSpacing(5)
-                        .padding()
-
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("Top 10 Lowest Purine")
-                            .font(.subheadline)
-                            .foregroundStyle(Color.gray)
-                        Divider()
-                    }
-                    .padding(.horizontal)
-
-                    ForEach(Array(categoryList.enumerated()), id: \.element.id)
-                    {
-                        index, ingredient in
-                        NavigationLink {
-                            IngredientDetailedView(
-                                ingredient: ingredient,
-                                isFavorite: user.isIngredientFav(ingredient)
-                            )
-                            .environmentObject(user)
-                            .environmentObject(food)
-                        } label: {
-                            IngredientRow(ingredient, at: index)
-                                .padding(.horizontal)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                    }
+                    Text(Helper.transformCate(category).capitalized)
+                        .font(.system(size: 36, weight: .heavy))
+                        .padding(.bottom, 5)
                 }
-                .padding(.bottom)
+                .padding(.horizontal)
+
+                Text(Helper.ingredientCatDescription(category: category))
+                    .lineSpacing(5)
+                    .padding()
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Lowest Purine Ingredients")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.gray)
+                    Divider()
+                }
+                .padding(.horizontal)
+
+                ForEach(Array(categoryList.enumerated()), id: \.element.id) {
+                    index, ingredient in
+                    NavigationLink {
+                        IngredientDetailedView(
+                            ingredient: ingredient,
+                            isFavorite: user.isIngredientFav(ingredient)
+                        )
+                        .environmentObject(user)
+                        .environmentObject(food)
+                    } label: {
+                        IngredientRow(ingredient, at: index)
+                            .padding(.horizontal)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
             }
+            .padding(.bottom)
         }
     }
 
@@ -67,11 +64,11 @@ struct TopIngredientList: View {
             HStack {
                 HStack(alignment: .top) {
                     Text("\(index + 1).")
-                        .font(.system(size: 18, weight: .semibold))
-                        .frame(width: 30, alignment: .leading)
+                        .font(.system(size: 16, weight: .semibold))
+                        .frame(width: 23, alignment: .leading)
                     VStack(alignment: .leading, spacing: 5) {
                         Text(ingredient.name.capitalized)
-                            .font(.system(size: 18, weight: .semibold))
+                            .font(.system(size: 16, weight: .semibold))
                         HStack(spacing: 5) {
                             Helper.tagImage(tag: ingredient.tag)
                             Text(

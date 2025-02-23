@@ -49,19 +49,28 @@ struct IngredientDetailedView: View {
                                 .font(.system(size: 18))
                             }
                         }
-
-                        Text(
-                            Helper.transformCate(ingredient.category)
-                                .capitalized
-                        )
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 10)
-                        .background(
-                            Helper.cateToColorMap[ingredient.category]!
-                        )
-                        .clipShape(Capsule())
+                        
+                        if let categoryList = food.topLowPurineByCategory[ingredient.category] {
+                            NavigationLink{
+                                TopIngredientList(
+                                    categoryList: categoryList, category: ingredient.category
+                                )
+                                .environmentObject(user)
+                            } label: {
+                                Text(
+                                    Helper.transformCate(ingredient.category)
+                                        .capitalized
+                                )
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 10)
+                                .background(
+                                    Helper.cateToColorMap[ingredient.category]!
+                                )
+                                .clipShape(Capsule())
+                            }
+                        }
                     }
 
                     VStack(alignment: .leading) {
